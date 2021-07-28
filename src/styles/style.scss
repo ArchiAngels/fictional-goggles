@@ -1,0 +1,22 @@
+$font-stack: 'Source Sans Pro', sans-serif;
+$primary-color: #333;
+$b-color:#000;
+$w:#fff;
+$body-color:#E7F6FF;
+html,body,a,p,h1,h2,h3,h4,h5,h6,ul,ol,li{
+  margin:0;
+  padding: 0;
+}
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+  font-size:1rem;
+  background-color: $body-color;
+}
+a{
+  color:$b-color;
+
+}
+a:visited{
+  color:$b-color;
+}

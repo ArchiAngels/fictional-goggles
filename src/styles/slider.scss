@@ -1,0 +1,94 @@
+.NewsSliderBlock{
+    height: 300px;
+    padding: 3rem;
+}
+.NewsSliderWrap{
+    background:#F4EFE9;
+    display:flex;
+    border-radius: 20px;
+    position: relative;
+}
+.News_text-title{
+    max-width:240px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 46px;
+    & span{
+        color:#8BB43C;
+    }
+}
+.News-text{
+    margin: 16px 0 0 20px;
+}
+.News_text-title, .News_text-buy{
+    margin:20px 0 0 41px;
+}
+.News_text-buy{
+    width:170px;
+    height:40px;
+    border-radius: 20px;
+    background:#A5D364;
+    box-shadow: 0 0 15px #8cdb1d;
+    user-select: none;
+    transition: background-color 0.15s,transform 0.15s, box-shadow 0.15s;
+    & p{
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 10px 0 0 0;
+        font-family: roboto;
+        font-weight: bold;
+        color:#fff;
+    }
+    &:hover{
+        cursor: pointer;
+        background:#8dce31;
+        box-shadow: 0 0 25px #8cdb1d;
+    }
+    &:active{
+        transform: translateY(10px);
+    }
+}
+.News_text-logo{
+    width:99px;
+    height:40px;
+    background-image: url('../../media/image7.png');
+}
+.News-img{
+    width:642px;
+    height:300px;
+    margin-left:auto;
+    background-image: url('../../media/image6.png');
+}
+.News_btn-white-circle{
+    position: absolute;
+    right:0;
+    width:35px;
+    height:35px;
+    background:#fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+    transition: box-shadow 0.15s,transform 0.15s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:50%;
+    margin-top: 150px - 35px/2;
+    user-select: none;
+    .material-icons-outlined{
+        font-size:18px;
+        transition: margin-left 0.15s;
+    };    
+    &:hover{
+        cursor: pointer;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+        .material-icons-outlined{
+            margin-left:6px;
+        }
+    }
+    &:active{
+        box-shadow: 0px 4px 24px rgba(255, 0, 0, 0.24);
+        transform: translateX(10px);
+    }
+}

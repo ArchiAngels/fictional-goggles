@@ -1,0 +1,47 @@
+#SnikersContent{
+    // width:100vw;
+    max-width:984px;
+    // min-height:1500px;
+    background:#fff;
+    margin: 0px auto;
+}
+.SnikersContent{
+    padding: 40px 0 0 0;
+    display:flex;
+    flex-wrap: wrap;
+}
+.SnikersTopNav{
+    display: flex;
+    justify-content: space-between;
+    & p{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+.SnikersSearchWrpa{
+    color:#000;
+    position: relative;
+    & input{
+        width:250px;
+        height:40px;
+        border: 1px solid #F3F3F3;
+        box-sizing: border-box;
+        border-radius: 10px;
+        outline: none;
+        padding: 0 0 0 40px;
+        transition: border 0.15s;
+    }
+    & label{
+        position: absolute;
+        top:12px;
+        left:14px;
+    }
+    & span{
+        font-size:18px;
+    }
+    & input:focus{
+        border: 4px solid #cfd6ff;
+        padding: 0 0 0 37px;
+    }
+}
