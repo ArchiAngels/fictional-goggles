@@ -7,39 +7,59 @@ import SnikersAPI from '../../getDataFromApi.js';
 
 
 let SnikerCard = (props)=>{
-    console.log(`CARD ${props.localId} DRAWED`);
+    // console.log(`CARD ${props.localId} DRAWED`);
+    const CARD_NAME = `card${props.localId}`;
     const [state,setState] = useState({imgSRC:null,like:false,addCart:false,title:null,price:null});
     
     useEffect( function(){
-
-        if(state.imgSRC == null){
+        let fromLocalStorage = getCardInfoLocalStorage();
+        // console.log(fromLocalStorage);
+        if(fromLocalStorage == null){
             SnikersAPI(props.localId)
             .then(
                 function(data){
                     // console.log("API::",data);
                     if(data.status == 'BAD'){}
                     else{
-                        let img = (data.data.linkIMG_s);
-                        let title = (data.data.title);
-                        let price =  (data.data.price);
-                        let like =   checkInLocalStorage('like',props.localId);
-                        let cart =  checkInLocalStorage('addCart',props.localId);
-                        // props.didMount(img,like,price,title,cart);
-
                         let obj = {
-                            imgSRC:img,
-                            like:like,
-                            price:price,
-                            title:title,
-                            addCart:cart
+                            imgSRC:data.data.linkIMG_s,
+                            like:checkInLocalStorage('like',props.localId),
+                            price:data.data.price,
+                            title:data.data.title,
+                            addCart:checkInLocalStorage('addCart',props.localId)
                         };
 
-                        setState(obj);
+                        let objCopy = JSON.parse(JSON.stringify(obj));
+                            objCopy['id'] = props.localId;
+                            objCopy['isDrawed'] = true;
+
+                            setCardInfoLocalStorage(objCopy);
+                            setState(obj);
+
+                        
 
                         // return props.changeState(props.localId-1,obj);
                     }
                 }
             )
+        }
+        else if(fromLocalStorage.isDrawed == true){
+            fromLocalStorage.isDrawed = false;
+            setCardInfoLocalStorage(fromLocalStorage);
+        }
+        else{
+            let objCopy = JSON.parse(JSON.stringify(fromLocalStorage));
+                objCopy.like = checkInLocalStorage('like',props.localId);
+                objCopy.addCart = checkInLocalStorage('addCart',props.localId);
+                if(objCopy.isDrawed == true){
+
+                }else{
+                    fromLocalStorage.isDrawed = true;
+                    setCardInfoLocalStorage(fromLocalStorage);
+                    setState(objCopy);
+                    
+                }
+                
         }
         
     })
@@ -85,7 +105,7 @@ let SnikerCard = (props)=>{
                     temp_arr.shift();
                 console.log(arr,temp_arr);
                     arr = arr.concat(temp_arr); 
-                return l.setItem(name,arr);
+                return arr.length == 0 ? l.removeItem(name) : l.setItem(name,arr);
             }
             
         }
@@ -108,7 +128,29 @@ let SnikerCard = (props)=>{
         
         return output;
     }
+    function setCardInfoLocalStorage(object){
+        let l = localStorage;
+        let output = {
+            id:         object.id,
+            imgSRC:     object.imgSRC,
+            price:      object.price,
+            title:      object.title,
+            isDrawed:   object.isDrawed
+        };
+        output = JSON.stringify(output);
+        l.setItem(CARD_NAME,output);
+        
+    }
 
+    function getCardInfoLocalStorage(){
+        let l = localStorage;
+        let output = l.getItem(CARD_NAME);
+        if(output == null){
+            return null;
+        }else{
+            return JSON.parse(output);
+        }
+    }
     
     
     return <>

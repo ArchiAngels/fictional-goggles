@@ -2,6 +2,7 @@ import React from 'react';
 import '../styles/SnikerList.scss';
 import SnikerCard from '../components/SnikerCard.jsx';
 
+
 let SnikersList = ()=>{
     let emptyArray = [1,2,3,4,5,6,7,8,9,10,11,12];
     // let emptyArray = [1,2];
