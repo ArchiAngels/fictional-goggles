@@ -36,6 +36,9 @@ nav li{
     &:focus{
         background-color: $h-color;
     }
+    & div{
+        position: relative;
+    }
 }
 .selectedLink{
     background-color: $h-color;

@@ -7,10 +7,10 @@ import NavBar from '../components/NavBar.jsx';
 import Router from '../components/Router.jsx';
 
 
-let MyMain = (props)=>{
+let MyMain = ()=>{
     return <div className='MainContent'>
         <RouterReact>
-            <NavBar items3={props.items2}></NavBar>
+            <NavBar></NavBar>
             <Router></Router>
         </RouterReact>
         

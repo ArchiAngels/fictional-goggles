@@ -1,6 +1,8 @@
 import React,{ useState , useEffect} from 'react';
 import '../styles/snikerCard.scss';
 
+import { useStore } from 'react-redux';
+
 import SnikersAPI from '../../getDataFromApi.js';
 
 
@@ -9,6 +11,7 @@ import SnikersAPI from '../../getDataFromApi.js';
 let SnikerCard = (props)=>{
     // console.log(`CARD ${props.localId} DRAWED`);
     const CARD_NAME = `card${props.localId}`;
+    const test = useStore();
     const [state,setState] = useState({imgSRC:null,like:false,addCart:false,title:null,price:null});
     
     useEffect( function(){
@@ -80,22 +83,26 @@ let SnikerCard = (props)=>{
         value == true? add():rem();
 
         function add(){
-            // console.log("ADD",props.localId);
+            // console.log("ADD",`Page/changeCounter${name}`);
             let size = localStorage.getItem(name);
             
             if(size == null){
                 size = [];
+                test.dispatch({type:`Page/changeCounter${name}`,Counter:1});
                 return l.setItem(name, size.concat(props.localId));
             }else{
                 size = size.split(',');
                 let isExist = size.map(i => parseInt(i)).indexOf(props.localId);
-                return isExist != -1? 0: l.setItem(name, size.concat(props.localId));
+                    isExist = isExist == -1? size.concat(props.localId): 0;
+                test.dispatch({type:`Page/changeCounter${name}`,Counter:isExist.length});
+                
+                return l.setItem(name,isExist);
 
             }
             
         }
         function rem(){
-            // console.log('REMOVE',props.localId);
+            // console.log('REMOVE',`Page/changeCounter${name}`);
             let arr =  l.getItem(name).split(",").map(i => parseInt(i));
             let index = arr.indexOf(props.localId);
             if(index == -1){
@@ -103,8 +110,9 @@ let SnikerCard = (props)=>{
             }else{
                 let temp_arr = arr.splice(index);
                     temp_arr.shift();
-                console.log(arr,temp_arr);
+                // console.log(arr,temp_arr);
                     arr = arr.concat(temp_arr); 
+                    test.dispatch({type:`Page/changeCounter${name}`,Counter:arr.length});
                 return arr.length == 0 ? l.removeItem(name) : l.setItem(name,arr);
             }
             

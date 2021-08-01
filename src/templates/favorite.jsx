@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/SnikerList.scss';
 import SnikerCard from '../components/SnikerCard.jsx';
+import Empty from './NoItems.jsx';
 
 function Favorite(){
     let l = localStorage.getItem('like');
@@ -9,7 +10,7 @@ function Favorite(){
     return <div className='SnikersContent'>
 
         {arrFavorites == 0? 
-            <p>Empty</p>
+            <Empty></Empty>
         :
             arrFavorites.map(function(elem){
                 return <SnikerCard key = {elem} localId={elem}/>
