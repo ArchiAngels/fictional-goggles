@@ -4,6 +4,7 @@ const initialState = {
     currentPage: 1,
     HowMuchFavoriteItems:  -1,
     HowMuchSelectedItems:-1,
+    CurrentFormAuth:'register'
 }
 
 export default function ReducerState(state = initialState, action ){
@@ -24,6 +25,12 @@ export default function ReducerState(state = initialState, action ){
             return {
                 ...state,
                 HowMuchSelectedItems: state.HowMuchSelectedItems = action.Counter
+            }
+        };
+        case 'Page/SwitchForm':{
+            return {
+                ...state,
+                CurrentFormAuth: state.CurrentFormAuth = state.CurrentFormAuth == 'register'? 'login':'register'
             }
         };
         default:{

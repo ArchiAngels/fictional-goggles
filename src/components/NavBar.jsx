@@ -1,4 +1,4 @@
-import React , { useState } from 'react';
+import React , { useEffect, useState } from 'react';
 import '../styles/navbar.scss';
 import {Link} from 'react-router-dom';
 import Counter from './counter.jsx';
@@ -19,6 +19,7 @@ function NavBar(){
     let [link,setLink] = useState(getCurrentActive());
     let [Active,setActive] = useState(1);
 
+
     function getCurrentActive(){
         let w = window.location.pathname;
         let output = links.filter((item) =>{
@@ -28,6 +29,7 @@ function NavBar(){
         })
 
         // console.log(w,links,output);
+        test.dispatch({type:'Page/changeCurrentWindow',idOfPage:output[0].id});
         return output[0].id;
 
     }
