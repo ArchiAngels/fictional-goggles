@@ -16,8 +16,21 @@ let links = [
 function NavBar(){
     // console.log("DRAWED");
     let test = useStore();
-    let [link,setLink] = useState(1);
+    let [link,setLink] = useState(getCurrentActive());
     let [Active,setActive] = useState(1);
+
+    function getCurrentActive(){
+        let w = window.location.pathname;
+        let output = links.filter((item) =>{
+            if(item.href == w){
+                return item.id
+            } 
+        })
+
+        // console.log(w,links,output);
+        return output[0].id;
+
+    }
 
     function CurrentLink(aa){
         test.dispatch({type:'Page/changeCurrentWindow',idOfPage:aa});

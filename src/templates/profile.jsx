@@ -1,6 +1,7 @@
 import React from 'react';
+import LoginForm from './loginForm.jsx';
 function Profile(){
-    return <p>Profile page</p>
+    return <LoginForm></LoginForm>
 }
 
 export default Profile;
