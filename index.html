@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="fav.jpg" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
 
 
     <title>My shop sneakers</title>
@@ -16,6 +14,21 @@
     <div id="root"></div>
 
     <script src="./bundled.myReactApp.js"></script>
+
+    <script>
+    //     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    // <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+        window.onload = function(){
+            let Icon = document.createElement('link');
+                Icon.href =  "https://fonts.googleapis.com/icon?family=Material+Icons+Outlined";
+                Icon.rel = 'stylesheet';
+            let Fonts = document.createElement('link');
+                Fonts.href = 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap';
+                Fonts.rel = 'stylesheet';
+            document.head.appendChild(Icon);
+            document.head.appendChild(Fonts);
+        }
+    </script>
 
 </body>
 </html>
