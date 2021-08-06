@@ -4,7 +4,17 @@ const initialState = {
     currentPage: 1,
     HowMuchFavoriteItems:  -1,
     HowMuchSelectedItems:-1,
-    CurrentFormAuth:'register'
+    CurrentFormAuth:'register',
+    authForm:{
+        // code 1 - true
+        // code 2 - false
+        // code 3 - neutral
+        login:3,
+        FirstName:3,
+        LastName:3,
+        Email:3,
+        Password:3,
+    }
 }
 
 export default function ReducerState(state = initialState, action ){
@@ -31,6 +41,17 @@ export default function ReducerState(state = initialState, action ){
             return {
                 ...state,
                 CurrentFormAuth: state.CurrentFormAuth = state.CurrentFormAuth == 'register'? 'login':'register'
+            }
+        };
+        case 'Page/switchErrorAuthForm':{
+            let name = action.name;
+            return {
+                ...state,
+                authForm: {
+                    ...state.authForm,
+                    [name] : state.authForm[name] = action.value
+                    
+                }
             }
         };
         default:{
