@@ -19,21 +19,20 @@ export default function HandlerSubmit(event,store){
         return data.authForm;
     }
 
-    console.log(ResultObjBoll,ResultObjBoll.pass.length / (ResultObjBoll.pass.length + ResultObjBoll.failed.length));
 
     // console.log(select(store.getState()));
 
 
 
     ResultObjBoll.pass.forEach(function(item){
-        store.dispatch({type:'Page/switchErrorAuthForm',name:item.name,value:1})
+        store.dispatch({type:'Page/switchErrorAuthForm',name:item.name,value:{value:item.value,code:1}})
     });
 
     ResultObjBoll.failed.forEach(function(item){
         if(item.el.value.trim() == ''){
-            store.dispatch({type:'Page/switchErrorAuthForm',name:item.el.name,value:3})
+            store.dispatch({type:'Page/switchErrorAuthForm',name:item.el.name,value:{value:item.value,code:3}})
         }else{
-            store.dispatch({type:'Page/switchErrorAuthForm',name:item.el.name,value:2})
+            store.dispatch({type:'Page/switchErrorAuthForm',name:item.el.name,value:{value:item.value,code:2}})
         }
         
     })
@@ -140,5 +139,8 @@ export default function HandlerSubmit(event,store){
                 return {boll:true};
             }
     }
+
+    console.log(ResultObjBoll,ResultObjBoll.pass.length / (ResultObjBoll.pass.length + ResultObjBoll.failed.length));
+    return ResultObjBoll.pass.length / (ResultObjBoll.pass.length + ResultObjBoll.failed.length);
 
 }
