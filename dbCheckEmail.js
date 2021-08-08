@@ -1,7 +1,8 @@
 function getEmail(email){
+    const AddNewUser = require('./backend/createNewUser');
     const { MongoClient } = require("mongodb");
 
- 
+    let currentID_,email2;
 
     // Replace the following with your Atlas connection string                                                                                                                                        
     
@@ -24,22 +25,38 @@ function getEmail(email){
                 
             currentID_ = await usersList.findOne(queryID);
 
-            let queryEmail = {"Email":email};
+            let queryEmail = {"Email":email.Email};
 
             email2 = await usersList.findOne(queryEmail);
 
-            console.log('HERE::',currentID_);
-            if(email2 == undefined){
-                console.log('This email is free to use');
-                return Promise.resolve({mess:'ok'});
-            }else{
-                console.log('email already used enter another email');
-                return Promise.resolve({mess:'bad'});
+            console.log('HERE::',currentID_.currentID);
+            function mm(){
+                return new Promise(async function(resl,reje){
+                    if(email2 == undefined){
+                        console.log('This email is free to use');
+                        await AddNewUser.CreateUserDB(usersList,currentID_,email)
+                        .then(
+                            function(value){
+                                console.log("OK",value);
+                                resl(value)
+                            }
+                        );
+                        
+                    }else{
+                        console.log('email already used enter another email');
+                        reje('bad');
+                    }
+                }).then(
+                    function(value){
+                        return value;
+                    },
+                    function(error){
+                        return error;
+                    }
+                )
             }
-            
 
-            
-
+            return await mm();
             
     
         } catch (err) {

@@ -1,4 +1,5 @@
 function AddDataToBD(linkIMG_s,linkIMG_l,price,title){
+    const NextId = require('./backend/nextId');
     const { MongoClient } = require("mongodb");
 
  
@@ -31,7 +32,7 @@ function AddDataToBD(linkIMG_s,linkIMG_l,price,title){
             // console.log("CURRENT ID::",currentID_);
 
             const doc = { 
-                myId:await nextId(),
+                myId:await NextId(currentID_,SnikersList),
                 linkIMG_s:'/sniker10.jpg',
                 linkIMG_l:'/sniker10_l.jpg',
                 price:"189.99 $",
@@ -69,28 +70,6 @@ function AddDataToBD(linkIMG_s,linkIMG_l,price,title){
     }
     
     return run().catch(console.dir);
-
-    async function nextId(){
-        let NEXT_ID = parseInt(currentID_.currentID)+1;
-        const filter = { "myID": "-1" };
-            const updateDoc = {
-                $set: {
-            
-                    currentID: (NEXT_ID)+''
-
-                },
-            };
-        
-            const result = await SnikersList.updateOne(filter, updateDoc);
-        
-            // console.log(
-        
-            //     `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
-        
-            // );
-        console.log(NEXT_ID);
-        return NEXT_ID+'';
-    }
 };
 
 
