@@ -1,5 +1,4 @@
 function getEmail(email){
-    const AddNewUser = require('./backend/createNewUser');
     const { MongoClient } = require("mongodb");
 
     let currentID_,email2;
@@ -29,11 +28,12 @@ function getEmail(email){
 
             email2 = await usersList.findOne(queryEmail);
 
-            console.log('HERE::',currentID_.currentID);
+            // console.log('HERE::',currentID_.currentID);
             function mm(){
                 return new Promise(async function(resl,reje){
                     if(email2 == undefined){
-                        console.log('This email is free to use');
+                        const AddNewUser = require('./backend/createNewUser');
+                        // console.log('This email is free to use');
                         await AddNewUser.CreateUserDB(usersList,currentID_,email)
                         .then(
                             function(value){
@@ -43,7 +43,7 @@ function getEmail(email){
                         );
                         
                     }else{
-                        console.log('email already used enter another email');
+                        // console.log('email already used enter another email');
                         reje('bad');
                     }
                 }).then(
@@ -67,7 +67,7 @@ function getEmail(email){
         }
     
         finally {
-            console.log('finally::',currentID_);
+            // console.log('finally::',currentID_);
             await client.close();
     
         }

@@ -1,4 +1,4 @@
-
+import checkForm from './frontend/verifyInputs';
 export default function HandlerSubmit(event,store){
     // console.log('CHECK ALL DATA');
     // CHECK ALL DATA
@@ -63,13 +63,13 @@ export default function HandlerSubmit(event,store){
 
             if(name == 'login'){
                 let maxLength = 64;
-                result = isNotHaveDangerSymbols(value);
+                result = checkForm.isNotHaveDangerSymbols(value);
                 result = value.length > maxLength ? {boll:false,why:'out of limit of email length'}:result;
 
             }else if(name == 'FirstName' || name == 'LastName'){
                 let maxLength = 255;
-                let dangerNot = isNotHaveDangerSymbols(value);
-                let digitsNot = isNotHaveDigits(value);
+                let dangerNot = checkForm.isNotHaveDangerSymbols(value);
+                let digitsNot = checkForm.isNotHaveDigits(value);
                     if(dangerNot.boll == true && digitsNot.boll == true){
                         result = value.length > maxLength ? {boll:false,why:'out of limit of email length'}:{boll:true};
                     }else{
@@ -77,7 +77,7 @@ export default function HandlerSubmit(event,store){
                     }
             }else if(name == 'Email'){
                 let maxLength = 320;
-                result = isGoodEmail(value);
+                result = checkForm.isGoodEmail(value);
                 result = value.length > maxLength ? {boll:false,why:'out of limit of email length'}:result;
             }
             else if(name == 'Password'){
@@ -93,51 +93,6 @@ export default function HandlerSubmit(event,store){
             // console.log('SIZE IS NOT GOOD',value.length);
             ResultObjBoll.failed.push({el:input,why:'bad length of value'});
         }
-    }
-
-    function isNotHaveDangerSymbols(string){
-        let reqx = /\W/gi;
-        let output = string.match(reqx);
-            if(output == null){
-                // ZERO dangerSymbols
-                // console.log('NO PROBLEMS danger');
-                return {boll:true};
-                
-            }else{
-                //  > 0 problems
-                // console.log(`PROBLEM:: "${output}" length:${output.length}`);
-                return {boll:false,why:'Bad field \nMaybe you did use special characters? it\'s not allowed'};
-            }
-
-    }
-
-    function isNotHaveDigits(string){
-        let reqx = /\d/g;
-        let output = string.match(reqx);
-            if(output == null){
-                // Zero digits
-                // console.log('NO PROBLEMS digits');
-                return {boll:true};
-            }else{
-                // Have digits
-                // console.log(`PROBLEM:: "${output}" length:${output.length}`);
-                return {boll:false,why:'Bad field \nMaybe you did use numbers? it\'s not allowed '};
-            }
-    }
-
-    function isGoodEmail(string){
-        // console.log('VERIFY EMAIL START');
-        let reqx = /^\w+([.-]\w+)?@(\w+[.-])+\w+$/g;
-        let output = string.match(reqx);
-            // console.log('MM::',output);
-            if(output == null){
-                // Problems
-                // console.log(`PROBLEM:: "${output}"`);
-                return {boll:false,why:'Bad email adress \nMaybe you did use something hot'};
-            }else{
-                // console.log(`GOOD :: "${output}" length:${output.length}`);
-                return {boll:true};
-            }
     }
 
     console.log(ResultObjBoll,ResultObjBoll.pass.length / (ResultObjBoll.pass.length + ResultObjBoll.failed.length));

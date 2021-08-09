@@ -1,9 +1,10 @@
 const registrEmail = require('./backend/regEmail');
+const logEmail = require('./backend/logEmailAndPass');
 const express = require('express');
 const router = express.Router();
 
-router.post('/maybe', function(req,res){
-    console.log(req.url);
+router.post('/register', function(req,res){
+    // console.log(req.url);
     req.on('data', chunk => {
         
         console.log(`Data chunk available: ${chunk}`)
@@ -11,5 +12,15 @@ router.post('/maybe', function(req,res){
         
     })
     
-})
+});
+router.post('/login', function(req,res){
+    // console.log(req.url);
+    req.on('data', chunk => {
+        
+        console.log(`Data chunk available: ${chunk}`)
+        return logEmail(chunk,res);
+        
+    })
+    
+});
 module.exports = router

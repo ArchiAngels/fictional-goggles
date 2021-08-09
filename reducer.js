@@ -54,6 +54,12 @@ export default function ReducerState(state = initialState, action ){
                 }
             }
         };
+        case 'Page/clearAuthForm':{
+            return {
+                ...state,
+                authForm: state.authForm = {login:3,FirstName:3,LastName:3,Email:3,Password:3,}
+            }
+        };
         default:{
             return state
         }
