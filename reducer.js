@@ -14,7 +14,8 @@ const initialState = {
         LastName:3,
         Email:3,
         Password:3,
-    }
+    },
+    isLogged:false
 }
 
 export default function ReducerState(state = initialState, action ){
@@ -58,6 +59,18 @@ export default function ReducerState(state = initialState, action ){
             return {
                 ...state,
                 authForm: state.authForm = {login:3,FirstName:3,LastName:3,Email:3,Password:3,}
+            }
+        };
+        case 'Page/LoginTrue':{
+            return {
+                ...state,
+                isLogged: state.isLogged = true
+            }
+        };
+        case 'Page/LogoutTrue':{
+            return {
+                ...state,
+                isLogged: state.isLogged = false
             }
         };
         default:{

@@ -5,8 +5,13 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state){
     xhr.open('POST',url);
     xhr.send(body);
     xhr.onload = function(){
-        console.log(xhr.response);
-        state(xhr.response);
+        let r = JSON.parse(xhr.response);
+        console.log(r);
+        if(r.mess == 'ok'){
+            state(r.mess);
+            store.dispatch({type:'Page/LoginTrue'});
+            console.log('STORE_SERVER_SEND::',store.getState());
+        }
     }
 
     function getDATA(){

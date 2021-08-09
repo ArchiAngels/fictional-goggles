@@ -81,7 +81,7 @@ export default function HandlerSubmit(event,store){
                 result = value.length > maxLength ? {boll:false,why:'out of limit of email length'}:result;
             }
             else if(name == 'Password'){
-                result.boll = true;
+                result = checkForm.isPass(value);
             }
              
             
