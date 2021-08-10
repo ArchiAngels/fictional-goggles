@@ -1,4 +1,4 @@
-function getEmail(email){
+function getEmail(email,type){
     const { MongoClient } = require("mongodb");
 
     let currentID_,email2;
@@ -24,27 +24,50 @@ function getEmail(email){
                 
             currentID_ = await usersList.findOne(queryID);
 
-            let queryEmail = {"Email":email.Email};
+            let queryEmail;
+
+            if(type == 'register'){
+                queryEmail = {"Email":email.Email};
+            }else if(type == 'login'){
+                const CheckToken = require('./backend/parseClientServerToken');
+                queryEmail = {
+                    "Email":CheckToken.DB_HASH(email.Email),
+                    "Password":CheckToken.DB_HASH(email.Password)
+                };
+            }
+
+             
 
             email2 = await usersList.findOne(queryEmail);
 
             // console.log('HERE::',currentID_.currentID);
             function mm(){
                 return new Promise(async function(resl,reje){
-                    if(email2 == undefined){
-                        const AddNewUser = require('./backend/createNewUser');
-                        // console.log('This email is free to use');
-                        await AddNewUser.CreateUserDB(usersList,currentID_,email)
-                        .then(
-                            function(value){
-                                console.log("OK",value);
-                                resl(value)
-                            }
-                        );
-                        
-                    }else{
-                        // console.log('email already used enter another email');
-                        reje('bad');
+                    if(type == 'register'){
+                        if(email2 == undefined){
+                            const AddNewUser = require('./backend/createNewUser');
+                            // console.log('This email is free to use');
+                            await AddNewUser.CreateUserDB(usersList,currentID_,email)
+                            .then(
+                                function(value){
+                                    console.log("OK",value);
+                                    resl({mess:value.mess,value:value.value})
+                                }
+                            );
+                            
+                        }else{
+                            // console.log('email already used enter another email');
+                            reje({mess:'bad',why:'email has used/busy'});  
+                        }
+                    }
+                    else if(type == 'login'){
+                        if(email2 == undefined){
+                            console.log("TEST::",email2);
+                            reje({mess:'bad',why:'something is wrong'});                            
+                        }else{
+                            // console.log('email already used enter another email');
+                            resl({mess:'ok',value:email2})
+                        }
                     }
                 }).then(
                     function(value){

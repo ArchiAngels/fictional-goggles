@@ -1,7 +1,10 @@
 exports.CreateUserDB = function(db,id,data){
     const NextId = require('../backend/nextId');
+    const CheckToken = require('../backend/parseClientServerToken');
     let result = null;
     let t = null;
+    
+    
     return new Promise(async function(resl,reje){
         t = setTimeout(()=>{
             reje({mess:'bad'});
@@ -12,13 +15,13 @@ exports.CreateUserDB = function(db,id,data){
                 login       :data.login,
                 FirstName   :data.FirstName,
                 LastName    :data.LastName,
-                Email       :data.Email,
-                Password    :data.Password,
+                Email       :CheckToken.DB_HASH(data.Email),
+                Password    :CheckToken.DB_HASH(data.Password),
             }
           
             result = await db.insertOne(doc);
 
-            return resl({mess:'ok'});
+            return resl({mess:'ok',value:doc});
             
         } 
         catch (error) {
@@ -30,11 +33,11 @@ exports.CreateUserDB = function(db,id,data){
     }).then(
         function(value){
             clearTimeout(t);
-            console.log("OK",value.mess);
-            return value.mess;
+            console.log("OK",value);
+            return value;
         },
         function(error){
-            return error.mess;
+            return error;
         }
     )
 

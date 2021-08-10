@@ -15,7 +15,8 @@ const initialState = {
         Email:3,
         Password:3,
     },
-    isLogged:false
+    isLogged:false,
+    token:null
 }
 
 export default function ReducerState(state = initialState, action ){
@@ -71,6 +72,18 @@ export default function ReducerState(state = initialState, action ){
             return {
                 ...state,
                 isLogged: state.isLogged = false
+            }
+        };
+        case 'Token/SetNew':{
+            return {
+                ...state,
+                token: state.token = action.token
+            }
+        };
+        case 'Token/DeleteCurrentToken':{
+            return {
+                ...state,
+                token: state.token = null
             }
         };
         default:{
