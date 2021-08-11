@@ -14,14 +14,16 @@ function Profile(){
     // 
     let unsubscribe;
     useEffect(function(){
+        // console.log(store.getState());
+        
         if(select()){
             console.log('ALREAD LOGIN IN');
         }else{
             let token = L.Read('token');
             if(token != null && token != undefined){
-                console.log("TOKEN::",token);
+                // console.log("TOKEN::",token);
                 store.dispatch({type:'Token/SetNew',token:token});
-                console.log(store.getState());
+                // console.log(store.getState());
                 Send.sendDataToServer('/auth/login/token',store,'token',setLogged,'notObj');
             }else{
                 unsubscribe = store.subscribe(handlerMini);
@@ -31,7 +33,6 @@ function Profile(){
     })
 
     function handlerMini(){
-        // console.log('subs');
         unsubscribe();
         setTimeout(()=>{
             if(logged == false){
@@ -51,7 +52,7 @@ function Profile(){
         return s.isLogged;
     }
     return <>
-        {logged ?<Logged/> :<LoginForm/>}
+        {logged ?<Logged store={store} loginOut={setLogged}/> :<LoginForm/>}
     </>
 }
 

@@ -13,6 +13,7 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
             state(r.mess);
             store.dispatch({type:'Page/LoginTrue'});
             console.log('STORE_SERVER_SEND::',store.getState());
+            // window.location.reload();
         }
     }
 

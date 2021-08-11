@@ -198,6 +198,9 @@ let SnikerCard = (props)=>{
                             className={state.price? state.addCart ? 'Choosed':"NotChoosed":'EMPTY btn-add'}
                             onClick={()=>{
                                 ChangeState('addCart',! state.addCart);
+                                if(props.changeSumPay){
+                                    props.changeSumPay();
+                                }
                             }
                         }>
                             <span className="material-icons-outlined">{state.price ? state.addCart ? "done" :"add":""}</span>

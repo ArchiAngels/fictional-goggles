@@ -56,45 +56,47 @@ function NavBar(){
     
 
     return (
-        <nav>
-            <div id={Active} className='Logo-wrap'>
-                <div className='logo-img'></div>
-                <div className='logo-text'>
-                    <div className='logo-title'>
-                        <p>REACT SNEAKERS</p>
-                    </div>
-                    <div className='logo-subtitle'>
-                        <p>Магазин лучших кроссовок</p>
+        <section className='NavBarMainWrap'>
+            <nav className='NavBar'>
+                <div className='Logo-wrap'>
+                    <div className='logo-img'></div>
+                    <div className='logo-text'>
+                        <div className='logo-title'>
+                            <p>REACT SNEAKERS</p>
+                        </div>
+                        <div className='logo-subtitle'>
+                            <p>Магазин лучших кроссовок</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div className='Nav-link-wrap'>
-                <ol>
-                    {links.map(function(elem){
-                        return <Link key={elem.id} className='a_li' to={elem.href} >
-                                <li 
-                                    className={`brick_li ${link == elem.id ? 'selectedLink':''} ${links.length == elem.id? 'border':''}`}
-                                    id={`Link${elem.id}`}
-                                    onClick={()=>{
-                                        CurrentLink(elem.id);
-                                    }}>
-                                        <div>
-                                            {elem.conter ?<Counter name={elem.conter}></Counter>:null}
-                                            <p>
-                                                <span className="material-icons-outlined icons">
-                                                    {elem.title}
-                                                </span>
-                                            </p>
-                                        
-                                        </div>        
-                                </li>
-                            </Link>    
-                        
-                    })}
-                </ol>
-            </div>
-            
-        </nav>
+                <div className='Nav-link-wrap'>
+                    <ol>
+                        {links.map(function(elem){
+                            return <Link key={elem.id} className='a_li' to={elem.href} >
+                                    <li 
+                                        className={`brick_li ${link == elem.id ? 'selectedLink':''} ${links.length == elem.id? 'border':''}`}
+                                        id={`Link${elem.id}`}
+                                        onClick={()=>{
+                                            CurrentLink(elem.id);
+                                        }}>
+                                            <div>
+                                                {elem.conter ?<Counter name={elem.conter}></Counter>:null}
+                                                <p>
+                                                    <span className="material-icons-outlined icons">
+                                                        {elem.title}
+                                                    </span>
+                                                </p>
+                                            
+                                            </div>        
+                                    </li>
+                                </Link>    
+                            
+                        })}
+                    </ol>
+                </div>
+                
+            </nav>
+        </section>
     )
 }
 
