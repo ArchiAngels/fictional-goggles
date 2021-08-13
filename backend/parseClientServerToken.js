@@ -7,11 +7,13 @@ exports.Parse = function(token){
     
     jwt.verify(token,secret,function(err,decode){
         if(err){
-            result.mess = 'bad',
+            result.mess = 'bad';
             result.why = err;
+            result.state = false;
         }else{
-            result.mess = 'ok',
+            result.mess = 'ok';
             result.token = token;
+            result.state = true;
         }
     });
 
@@ -38,11 +40,13 @@ exports.DB_DECODE = function(token){
     
     jwt.verify(token,SECRET_DB,function(err,decode){
         if(err){
-            result.mess = 'bad',
+            result.mess = 'bad';
             result.why = err;
+            result.state = false;
         }else{
-            result.mess = 'ok',
+            result.mess = 'ok';
             result.token = token;
+            result.state = true;
         }
     });
 

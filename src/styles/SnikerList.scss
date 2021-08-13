@@ -48,7 +48,7 @@
 .Total{
     border-top:1px solid black;
     width:100%;
-    padding:0 20px;
+    padding:20px;
     display: flex;
     & .toPay{
         font-size:20px;
@@ -61,10 +61,19 @@
         border-radius: 15px;
         text-align: center;
         font-size:20px;
-        // transition: tra;
+        margin: 0 0 0 50px;
+        background: #cfd6ff;
+        transition: 
+            transform 0.15s,
+            box-shadow 0.15s
+        ;
         cursor: pointer;
         &:hover{
-            color:red;
+            // color:red;
+            box-shadow: 0 0 10px red;
+        }
+        &:active{
+            transform: translateY(10px);
         }
     }
 }

@@ -8,12 +8,18 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
     xhr.onload = function(){
         let r = JSON.parse(xhr.response);
         console.log(r);
-        mm.Save('token',r.token);
-        if(r.mess == 'ok'){
-            state(r.mess);
+        
+        if(r.state == true){
+            mm.Save('token',r.token);
+            state(r.state);
             store.dispatch({type:'Page/LoginTrue'});
             console.log('STORE_SERVER_SEND::',store.getState());
             // window.location.reload();
+        }else{
+            // mm.Delete('token');
+            // // state(r.state);
+            // store.dispatch({type:'Page/LogoutTrue'});
+            
         }
     }
 
