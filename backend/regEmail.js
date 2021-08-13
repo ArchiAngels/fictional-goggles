@@ -1,5 +1,5 @@
 exports.VerifyReg = function(chunk,res,typeAccAction){
-    const getEmail = require('../dbCheckEmail');
+    const getEmail = require('./dbCheckEmail');
     const CheckToken = require('./parseClientServerToken');
     return new Promise(async function(myresolve,myreject){
         let parsedObj = JSON.parse(JSON.parse(chunk+''));

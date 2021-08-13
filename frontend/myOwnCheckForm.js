@@ -1,4 +1,4 @@
-import checkForm from './frontend/verifyInputs';
+import checkForm from './verifyInputs';
 export default function HandlerSubmit(event,store){
     // console.log('CHECK ALL DATA');
     // CHECK ALL DATA

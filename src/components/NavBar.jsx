@@ -17,7 +17,8 @@ function NavBar(){
     // console.log("DRAWED");
     let test = useStore();
     let [link,setLink] = useState(getCurrentActive());
-    let [Active,setActive] = useState(1);
+
+    let oldLink = select(test.getState());
 
 
     function getCurrentActive(){
@@ -29,30 +30,39 @@ function NavBar(){
         })
 
         // console.log(w,links,output);
-        test.dispatch({type:'Page/changeCurrentWindow',idOfPage:output[0].id});
-        return output[0].id;
+        let result = output.length == 0 ? 1 : output[0].id;
+        test.dispatch({type:'Page/changeCurrentWindow',idOfPage:result});
+        return result;
 
     }
-
     function CurrentLink(aa){
         test.dispatch({type:'Page/changeCurrentWindow',idOfPage:aa});
+        
+
+        
         // setLink(select(test.getState()))
     }
 
-    let unsubscribe = test.subscribe(() => {
-        // console.log('subscribed');
-        function select(state){
-            return state.currentPage;
-        }
-        let s = test.getState();
-        // console.log(s);
-        setLink(select(s));
-        unsubscribe();
-        // console.log(Active);
-        setActive(++Active);
-    } )
+    let unsubscribe = test.subscribe(miniHandler)
     
+    function miniHandler(){
+        let fresh = select(test.getState());
+        if(oldLink == fresh){
+            // console.log('NAVBAR NOTHING',oldLink,fresh);
+        }else{
+            // console.log('NAVBAR CHANGE',oldLink,fresh);
+            unsubscribe();
 
+            let s = test.getState();
+            // console.log(s);
+            setLink(select(s));
+            
+        }
+    }
+
+    function select(state){
+        return state.currentPage;
+    }
     
 
     return (

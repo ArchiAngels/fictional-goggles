@@ -29,7 +29,7 @@ function getEmail(email,type){
             if(type == 'register'){
                 queryEmail = {"Email":email.Email};
             }else if(type == 'login'){
-                const CheckToken = require('./backend/parseClientServerToken');
+                const CheckToken = require('./parseClientServerToken');
                 queryEmail = {
                     "Email":CheckToken.DB_HASH(email.Email),
                     "Password":CheckToken.DB_HASH(email.Password)

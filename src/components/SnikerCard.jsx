@@ -3,7 +3,7 @@ import '../styles/snikerCard.scss';
 
 import { useStore } from 'react-redux';
 
-import SnikersAPI from '../../getDataFromApi.js';
+import SnikersAPI from '../../frontend/getDataFromApi.js';
 
 
 

@@ -1,5 +1,5 @@
-const registrEmail = require('./backend/regEmail');
-const CheckToken = require('./backend/parseClientServerToken');
+const registrEmail = require('./regEmail');
+const CheckToken = require('./parseClientServerToken');
 const express = require('express');
 
 const router = express.Router();

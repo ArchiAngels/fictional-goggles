@@ -18,7 +18,7 @@ function Profile(){
         // console.log(store.getState());
         
         if(select() == true){
-            console.log('ALREAD LOGIN IN');
+            // console.log('ALREAD LOGIN IN');
         }else{
             let token = L.Read('token');
             if(token != null && token != undefined){
@@ -26,6 +26,7 @@ function Profile(){
                 store.dispatch({type:'Token/SetNew',token:token});
                 // console.log(store.getState());
                 Send.sendDataToServer('/auth/login/token',store,'token',setLogged,'notObj');
+                // console.log(dataFromServer);
             }else{
                 // console.log('wait');
                 copyOfStore = {...store.getState()};

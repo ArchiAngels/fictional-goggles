@@ -1,5 +1,5 @@
 function AddDataToBD(linkIMG_s,linkIMG_l,price,title){
-    const NextId = require('./backend/nextId');
+    const NextId = require('./nextId');
     const { MongoClient } = require("mongodb");
 
  

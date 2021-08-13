@@ -1,9 +1,9 @@
-
+const mm = require('./Fdb.js');
 
 const initialState = {  
     currentPage: 1,
-    HowMuchFavoriteItems:  -1,
-    HowMuchSelectedItems:-1,
+    HowMuchFavoriteItems: mm.ReadArr('like') ,
+    HowMuchSelectedItems:mm.ReadArr('addCart'),
     CurrentFormAuth:'register',
     authForm:{
         // code 1 - true

@@ -1,6 +1,6 @@
 exports.CreateUserDB = function(db,id,data){
-    const NextId = require('../backend/nextId');
-    const CheckToken = require('../backend/parseClientServerToken');
+    const NextId = require('./nextId');
+    const CheckToken = require('./parseClientServerToken');
     let result = null;
     let t = null;
     
