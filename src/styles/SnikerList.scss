@@ -6,9 +6,12 @@
     margin: 0px auto;
 }
 .SnikersContent{
-    padding: 40px 0 0 0;
+    padding: 40px 0;
     display:flex;
     flex-wrap: wrap;
+    &.Fortypx{
+        padding: 40px 40px 0px 40px;
+    }
 }
 .SnikersTopNav{
     display: flex;
@@ -54,23 +57,28 @@
         font-size:20px;
         font-weight: 900;
         letter-spacing: 2px;
+        & .price{
+            background:#000;
+            color:#fff;
+        }
     }
     & .btn-buy{
         width:100px;
         height:30px;
         border-radius: 15px;
         text-align: center;
+        user-select: none;
         font-size:20px;
         margin: 0 0 0 50px;
         background: #cfd6ff;
         transition: 
             transform 0.15s,
-            box-shadow 0.15s
+            box-shadow 0.09s
         ;
         cursor: pointer;
         &:hover{
             // color:red;
-            box-shadow: 0 0 10px red;
+            box-shadow: 0 0 10px #0025fa;
         }
         &:active{
             transform: translateY(10px);

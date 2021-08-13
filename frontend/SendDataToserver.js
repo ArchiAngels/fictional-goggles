@@ -2,7 +2,7 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
     const mm = require('./Fdb');
     let xhr = new XMLHttpRequest();
     let body = JSON.stringify(type == 'obj' ? getDATAAsObj():getDataAsVar());
-    console.log("BODY::",body);
+    // console.log("BODY::",body);
     xhr.open('POST',url);
     xhr.send(body);
     xhr.onload = function(){
@@ -10,12 +10,18 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
         console.log(r);
         
         if(r.state == true){
+            // console.log("OKKK");
             mm.Save('token',r.token);
-            state(r.state);
+            if(type == 'obj'){
+                state('ok');
+            }else{
+                state(r.state);
+            }
             store.dispatch({type:'Page/LoginTrue'});
             console.log('STORE_SERVER_SEND::',store.getState());
             // window.location.reload();
         }else{
+            console.log("OOOPS");
             // mm.Delete('token');
             // // state(r.state);
             // store.dispatch({type:'Page/LogoutTrue'});

@@ -41,10 +41,11 @@ function Profile(){
         setTimeout(()=>{
             if(whatIsHappened() == true){
                 if(select() == false){
-                
+                    // console.log("SKIP");
                     // console.log('STATE::',logged,count);
                     setCount(++count);
                 }else if(select() == true){
+                    // console.log("LOG IN");
                     setLogged(select());
                 }
             }

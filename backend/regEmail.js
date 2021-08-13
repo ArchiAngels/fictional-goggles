@@ -16,7 +16,7 @@ exports.VerifyReg = function(chunk,res,typeAccAction){
 
         if(result.mess == 'ok'){
             clearTimeout(t);
-            myresolve({mess:result.mess,value:result.value,token:CheckToken.Hash(
+            myresolve({mess:result.mess,value:result.value,state:true,token:CheckToken.Hash(
                 {
                     data:{
                         login:result.value.login,
@@ -29,7 +29,7 @@ exports.VerifyReg = function(chunk,res,typeAccAction){
             });
         }else if(result.mess == 'bad'){
             clearTimeout(t);
-            myreject({mess:result.mess,why:result.why});
+            myreject({mess:result.mess,why:result.why,state:false});
         }
 
     }).then(

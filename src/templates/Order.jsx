@@ -34,7 +34,7 @@ function Order(){
             l = l == null? 0 : l == ''? 0: l.split(',').map(i => parseInt(i));
         return l;
     }
-    return <section className='SnikersContent'>
+    return <section className='SnikersContent Fortypx'>
 
         {oldSnikers == 0? 
             <Empty></Empty>
@@ -48,7 +48,7 @@ function Order(){
                 Total to pay : {getArrFav == 0 ? 
                         0 
                     : 
-                        price
+                        <span className='price'>{price}</span>
                 }
             </div>
             <div className="btn-buy">
