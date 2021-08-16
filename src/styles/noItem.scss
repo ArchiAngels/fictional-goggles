@@ -1,0 +1,49 @@
+.WrapEmptyBlock{
+    width:100%;
+    min-height:60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contentEmpty{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & .emojiEmpty{
+        font-size:70px;
+    }
+    & .TitleEmpty{
+        font-size:24px;
+    }
+    & .ParagraphEmpty{
+        font-size:16px;
+        margin: 0 0 20px 0;
+    }
+}
+
+.btnEmpty{
+    width:245px;
+    height:55px;
+    background: #9DD458;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:25px;
+    transition: transform 0.15s;
+    user-select: none;
+    color:#fff;
+    &:hover{
+        
+        cursor:pointer;
+        
+    }
+    &:active{
+        transform:translateX(-10px);
+    }
+    & .margin{
+        margin:0 5px;
+    }
+}
+

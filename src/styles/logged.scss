@@ -1,0 +1,13 @@
+.logged_main_wrap{
+    height:150vh;
+    background: linear-gradient(to right,#6dd5ed,#5ddb76);
+    // background: linear-gradient(to right,#6dd5ed,#f2f5f2);
+    // background: linear-gradient(to right,#f2f5f2,#5ddb76);
+    // background: linear-gradient(to right,#5ddb76,#f2f5f2);
+    // background: linear-gradient(to right,#6dd5ed,#f2f);
+
+    padding: 20px;
+    & p[functionality='loginOut']{
+        cursor: pointer;
+    }
+}

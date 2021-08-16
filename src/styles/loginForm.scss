@@ -1,0 +1,101 @@
+$bl: #4796ff;
+$gr: #efefef;
+$rd: #FF8585;
+
+.LoginFormWrap{
+    width:100%;
+    min-height:60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & .wrapForm{
+        width:50%;
+        height:50%;
+        background:#fff;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        & a{
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            color:$bl;
+            font-size:bold;
+        }
+        
+    }
+    & .form{
+        margin:20px 0;
+    }
+    & form {
+        width:305px;
+        margin: 0 auto;
+        & .longInput{
+            width:100%;
+
+            border-radius: 10px;
+        }
+        & .customLeft{
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        & .customRight{
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+        & .EmptySpace{
+            width:2px;
+            display: inline-block;
+        }
+        & input{
+            width: 151px;
+            outline: none;
+            border: none;
+            padding: 0 0 0 10px;
+            height:30px;
+            box-sizing: border-box;
+            background: $gr;
+            &:hover{
+                cursor: pointer;
+    
+            }
+            &:focus{
+                border:1px solid $bl ;
+                box-shadow: 0 0 10px $bl;
+            }
+        }
+        
+    }
+    & .SubmitBtnForm{
+        margin: 20px 0 0 0;
+        position: relative;
+        transition: transform 0.15s;
+        & .arrowRight{
+            position: absolute;
+            top:50%;
+            right:5%;
+            transform: translateY(-50%);
+            color:#fff;
+            transition: right 0.15s;
+        }
+        & input{
+            width:100%;
+            color:#fff;
+            height:40px;
+            background: $bl;
+            border:none;
+            border-radius: 10px;
+        }
+        &:hover{
+            & .arrowRight{
+                right:10%;
+            }
+        }
+        &:active{
+            transform: translateY(10px);
+        }
+    }
+    & .TermsOfUse{
+        text-align: center;
+    }
+}

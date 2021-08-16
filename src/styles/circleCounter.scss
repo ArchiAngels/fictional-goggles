@@ -1,0 +1,14 @@
+$red:#FF8585;
+$blue: #cfd6ff;
+
+.CircleCounter{
+    position: absolute;
+    width:20px;
+    height:20px;
+    background:$blue;
+    border-radius: 50%;
+    text-align: center;
+    top:-15px;
+    right:-15px;
+
+}
