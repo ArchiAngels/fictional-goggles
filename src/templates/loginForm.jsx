@@ -6,7 +6,6 @@ import LoginInForm from '../components/FormLogin.jsx';
 import CheckAllDataInForm from '../../frontend/myOwnCheckForm.js';
 import Send from '../../frontend/SendDataToserver.js';
 import FB from '../../frontend/Fdb.js';
-import e from 'express';
 
 let objRegister = {
     title:"Create Account",

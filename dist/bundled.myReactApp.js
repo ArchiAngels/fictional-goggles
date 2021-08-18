@@ -72,182 +72,6 @@ eval("exports.isGoodEmail = function(string){\n    // console.log('VERIFY EMAIL 
 
 /***/ }),
 
-/***/ "./media/image4.png":
-/*!**************************!*\
-  !*** ./media/image4.png ***!
-  \**************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"adfa79338ddd8364bbcb.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image4.png?");
-
-/***/ }),
-
-/***/ "./media/image6.png":
-/*!**************************!*\
-  !*** ./media/image6.png ***!
-  \**************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"0845db37936a566b178e.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image6.png?");
-
-/***/ }),
-
-/***/ "./media/image7.png":
-/*!**************************!*\
-  !*** ./media/image7.png ***!
-  \**************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-"use strict";
-eval("module.exports = __webpack_require__.p + \"9c749ec702651cd45443.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image7.png?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayLikeToArray)\n/* harmony export */ });\nfunction _arrayLikeToArray(arr, len) {\n  if (len == null || len > arr.length) len = arr.length;\n\n  for (var i = 0, arr2 = new Array(len); i < len; i++) {\n    arr2[i] = arr[i];\n  }\n\n  return arr2;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayWithHoles)\n/* harmony export */ });\nfunction _arrayWithHoles(arr) {\n  if (Array.isArray(arr)) return arr;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {\n  try {\n    var info = gen[key](arg);\n    var value = info.value;\n  } catch (error) {\n    reject(error);\n    return;\n  }\n\n  if (info.done) {\n    resolve(value);\n  } else {\n    Promise.resolve(value).then(_next, _throw);\n  }\n}\n\nfunction _asyncToGenerator(fn) {\n  return function () {\n    var self = this,\n        args = arguments;\n    return new Promise(function (resolve, reject) {\n      var gen = fn.apply(self, args);\n\n      function _next(value) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n      }\n\n      function _throw(err) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n      }\n\n      _next(undefined);\n    });\n  };\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _defineProperty)\n/* harmony export */ });\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/defineProperty.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _extends)\n/* harmony export */ });\nfunction _extends() {\n  _extends = Object.assign || function (target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n\n      for (var key in source) {\n        if (Object.prototype.hasOwnProperty.call(source, key)) {\n          target[key] = source[key];\n        }\n      }\n    }\n\n    return target;\n  };\n\n  return _extends.apply(this, arguments);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/extends.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _inheritsLoose)\n/* harmony export */ });\n/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ \"./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js\");\n\nfunction _inheritsLoose(subClass, superClass) {\n  subClass.prototype = Object.create(superClass.prototype);\n  subClass.prototype.constructor = subClass;\n  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":
-/*!*************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
-  \*************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _iterableToArrayLimit)\n/* harmony export */ });\nfunction _iterableToArrayLimit(arr, i) {\n  var _i = arr == null ? null : typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"];\n\n  if (_i == null) return;\n  var _arr = [];\n  var _n = true;\n  var _d = false;\n\n  var _s, _e;\n\n  try {\n    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {\n      _arr.push(_s.value);\n\n      if (i && _arr.length === i) break;\n    }\n  } catch (err) {\n    _d = true;\n    _e = err;\n  } finally {\n    try {\n      if (!_n && _i[\"return\"] != null) _i[\"return\"]();\n    } finally {\n      if (_d) throw _e;\n    }\n  }\n\n  return _arr;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableRest)\n/* harmony export */ });\nfunction _nonIterableRest() {\n  throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _objectSpread2)\n/* harmony export */ });\n/* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n\n\nfunction ownKeys(object, enumerableOnly) {\n  var keys = Object.keys(object);\n\n  if (Object.getOwnPropertySymbols) {\n    var symbols = Object.getOwnPropertySymbols(object);\n\n    if (enumerableOnly) {\n      symbols = symbols.filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(object, sym).enumerable;\n      });\n    }\n\n    keys.push.apply(keys, symbols);\n  }\n\n  return keys;\n}\n\nfunction _objectSpread2(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i] != null ? arguments[i] : {};\n\n    if (i % 2) {\n      ownKeys(Object(source), true).forEach(function (key) {\n        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);\n      });\n    } else if (Object.getOwnPropertyDescriptors) {\n      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));\n    } else {\n      ownKeys(Object(source)).forEach(function (key) {\n        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));\n      });\n    }\n  }\n\n  return target;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/objectSpread2.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _objectWithoutPropertiesLoose)\n/* harmony export */ });\nfunction _objectWithoutPropertiesLoose(source, excluded) {\n  if (source == null) return {};\n  var target = {};\n  var sourceKeys = Object.keys(source);\n  var key, i;\n\n  for (i = 0; i < sourceKeys.length; i++) {\n    key = sourceKeys[i];\n    if (excluded.indexOf(key) >= 0) continue;\n    target[key] = source[key];\n  }\n\n  return target;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _setPrototypeOf)\n/* harmony export */ });\nfunction _setPrototypeOf(o, p) {\n  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {\n    o.__proto__ = p;\n    return o;\n  };\n\n  return _setPrototypeOf(o, p);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _slicedToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js\");\n/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js\");\n\n\n\n\nfunction _slicedToArray(arr, i) {\n  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/slicedToArray.js?");
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
-/*!*******************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _unsupportedIterableToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js?");
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -441,7 +265,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ LoginForm)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _styles_loginForm_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/loginForm.scss */ \"./src/styles/loginForm.scss\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_registerInputs_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/registerInputs.jsx */ \"./src/components/registerInputs.jsx\");\n/* harmony import */ var _components_FormLogin_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/FormLogin.jsx */ \"./src/components/FormLogin.jsx\");\n/* harmony import */ var _frontend_myOwnCheckForm_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../frontend/myOwnCheckForm.js */ \"./frontend/myOwnCheckForm.js\");\n/* harmony import */ var _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../frontend/SendDataToserver.js */ \"./frontend/SendDataToserver.js\");\n/* harmony import */ var _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../frontend/Fdb.js */ \"./frontend/Fdb.js\");\n\n\n\n\n\n\n\n\n\n\n\nvar objRegister = {\n  title: \"Create Account\",\n  subTitle: 'Already have an account?',\n  submit: 'Sign up'\n};\nvar objLogin = {\n  title: \"Welcome\",\n  subTitle: 'Don\\'t have an account?',\n  submit: 'Sign in'\n};\nfunction LoginForm() {\n  var formRedux = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useStore)();\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(select(formRedux.getState())),\n      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState, 2),\n      formState = _useState2[0],\n      setForm = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(''),\n      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState3, 2),\n      res = _useState4[0],\n      setRes = _useState4[1]; // console.log('DRAW::',res);\n\n\n  var dataFromServer;\n\n  function select(item) {\n    return item.CurrentFormAuth;\n  }\n\n  function HandlerSubmit(_x) {\n    return _HandlerSubmit.apply(this, arguments);\n  }\n\n  function _HandlerSubmit() {\n    _HandlerSubmit = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(event) {\n      var s;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              if (!((0,_frontend_myOwnCheckForm_js__WEBPACK_IMPORTED_MODULE_8__.default)(event, formRedux) == 1)) {\n                _context.next = 9;\n                break;\n              }\n\n              s = formRedux.getState();\n              console.log(\"SEND\");\n              _context.next = 5;\n              return _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_9__.sendDataToServer(\"/auth/\".concat(select(s)), formRedux, 'authForm', setRes, 'obj');\n\n            case 5:\n              dataFromServer = _context.sent;\n              _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_10__.Save('user', {\n                n: dataFromServer.value.FirstName,\n                l: dataFromServer.value.LastName,\n                id: dataFromServer.value.id\n              });\n              _context.next = 10;\n              break;\n\n            case 9:\n              console.log(\"NOT SEND\");\n\n            case 10:\n            case \"end\":\n              return _context.stop();\n          }\n        }\n      }, _callee);\n    }));\n    return _HandlerSubmit.apply(this, arguments);\n  }\n\n  function SwitchForm() {\n    formRedux.dispatch({\n      type: 'Page/clearAuthForm'\n    });\n    formRedux.dispatch({\n      type: 'Page/SwitchForm'\n    });\n    var s = formRedux.getState();\n    setForm(select(s));\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"LoginFormWrap\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"wrapForm\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"titleWrap\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"h2\", null, formState == 'register' ? objRegister.title : objLogin.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"p\", null, formState == 'register' ? objRegister.subTitle : objLogin.subTitle, \" \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"a\", {\n    onClick: function onClick() {\n      SwitchForm();\n    }\n  }, formState != 'register' ? objRegister.submit : objLogin.submit))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"form\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"form\", {\n    action: \"/auth/maybe\",\n    method: \"POST\",\n    onSubmit: function onSubmit(event) {\n      event.preventDefault();\n      HandlerSubmit(event);\n    }\n  }, formState == 'register' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_components_registerInputs_jsx__WEBPACK_IMPORTED_MODULE_6__.default, {\n    propsRedux: formRedux\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_components_FormLogin_jsx__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"SubmitBtnForm\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"input\", {\n    type: \"submit\",\n    value: formState == 'register' ? objRegister.submit : objLogin.submit\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"span\", {\n    className: \"material-icons-outlined arrowRight\"\n  }, \"east\"))), res == '' ? '' : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"h4\", null, res)), formState == 'register' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"TermsOfUse\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"box-check\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"p\", null, \"I have read and agree the \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"a\", null, \"rules\"))) : ''));\n}\n\n//# sourceURL=webpack://react-express-snikers/./src/templates/loginForm.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ LoginForm)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ \"./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/regenerator */ \"./node_modules/@babel/runtime/regenerator/index.js\");\n/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _styles_loginForm_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../styles/loginForm.scss */ \"./src/styles/loginForm.scss\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _components_registerInputs_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/registerInputs.jsx */ \"./src/components/registerInputs.jsx\");\n/* harmony import */ var _components_FormLogin_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/FormLogin.jsx */ \"./src/components/FormLogin.jsx\");\n/* harmony import */ var _frontend_myOwnCheckForm_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../frontend/myOwnCheckForm.js */ \"./frontend/myOwnCheckForm.js\");\n/* harmony import */ var _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../frontend/SendDataToserver.js */ \"./frontend/SendDataToserver.js\");\n/* harmony import */ var _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../frontend/Fdb.js */ \"./frontend/Fdb.js\");\n\n\n\n\n\n\n\n\n\n\n\nvar objRegister = {\n  title: \"Create Account\",\n  subTitle: 'Already have an account?',\n  submit: 'Sign up'\n};\nvar objLogin = {\n  title: \"Welcome\",\n  subTitle: 'Don\\'t have an account?',\n  submit: 'Sign in'\n};\nfunction LoginForm() {\n  var formRedux = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useStore)();\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(select(formRedux.getState())),\n      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState, 2),\n      formState = _useState2[0],\n      setForm = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_3__.useState)(''),\n      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState3, 2),\n      res = _useState4[0],\n      setRes = _useState4[1]; // console.log('DRAW::',res);\n\n\n  var dataFromServer;\n\n  function select(item) {\n    return item.CurrentFormAuth;\n  }\n\n  function HandlerSubmit(_x) {\n    return _HandlerSubmit.apply(this, arguments);\n  }\n\n  function _HandlerSubmit() {\n    _HandlerSubmit = (0,_babel_runtime_helpers_asyncToGenerator__WEBPACK_IMPORTED_MODULE_0__.default)( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().mark(function _callee(event) {\n      var s;\n      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_2___default().wrap(function _callee$(_context) {\n        while (1) {\n          switch (_context.prev = _context.next) {\n            case 0:\n              if (!((0,_frontend_myOwnCheckForm_js__WEBPACK_IMPORTED_MODULE_8__.default)(event, formRedux) == 1)) {\n                _context.next = 9;\n                break;\n              }\n\n              s = formRedux.getState();\n              console.log(\"SEND\");\n              _context.next = 5;\n              return _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_9__.sendDataToServer(\"/auth/\".concat(select(s)), formRedux, 'authForm', setRes, 'obj');\n\n            case 5:\n              dataFromServer = _context.sent;\n              _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_10__.Save('user', {\n                n: dataFromServer.value.FirstName,\n                l: dataFromServer.value.LastName,\n                id: dataFromServer.value.id\n              });\n              _context.next = 10;\n              break;\n\n            case 9:\n              console.log(\"NOT SEND\");\n\n            case 10:\n            case \"end\":\n              return _context.stop();\n          }\n        }\n      }, _callee);\n    }));\n    return _HandlerSubmit.apply(this, arguments);\n  }\n\n  function SwitchForm() {\n    formRedux.dispatch({\n      type: 'Page/clearAuthForm'\n    });\n    formRedux.dispatch({\n      type: 'Page/SwitchForm'\n    });\n    var s = formRedux.getState();\n    setForm(select(s));\n  }\n\n  function suscess(res) {\n    if (res == 'ok') {\n      setTimeout(function () {\n        window.location.reload();\n      }, 300);\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"h4\", null, res);\n    } else if (res == 'bad') {\n      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"h4\", null, res);\n    } else {\n      return '';\n    }\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"LoginFormWrap\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"wrapForm\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"titleWrap\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"h2\", null, formState == 'register' ? objRegister.title : objLogin.title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"p\", null, formState == 'register' ? objRegister.subTitle : objLogin.subTitle, \" \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"a\", {\n    onClick: function onClick() {\n      SwitchForm();\n    }\n  }, formState != 'register' ? objRegister.submit : objLogin.submit))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"form\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"form\", {\n    action: \"/auth/maybe\",\n    method: \"POST\",\n    onSubmit: function onSubmit(event) {\n      event.preventDefault();\n      HandlerSubmit(event);\n    }\n  }, formState == 'register' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_components_registerInputs_jsx__WEBPACK_IMPORTED_MODULE_6__.default, {\n    propsRedux: formRedux\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_components_FormLogin_jsx__WEBPACK_IMPORTED_MODULE_7__.default, null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"SubmitBtnForm\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"input\", {\n    type: \"submit\",\n    value: formState == 'register' ? objRegister.submit : objLogin.submit\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"span\", {\n    className: \"material-icons-outlined arrowRight\"\n  }, \"east\")))), formState == 'register' ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"TermsOfUse\"\n  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"div\", {\n    className: \"box-check\"\n  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"p\", null, \"I have read and agree the \", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(\"a\", null, \"rules\"))) : ''));\n}\n\n//# sourceURL=webpack://react-express-snikers/./src/templates/loginForm.jsx?");
 
 /***/ }),
 
@@ -452,7 +276,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _frontend_Fdb__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../frontend/Fdb */ \"./frontend/Fdb.js\");\n/* harmony import */ var _frontend_SendDataToserver__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../frontend/SendDataToserver */ \"./frontend/SendDataToserver.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _loginForm_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./loginForm.jsx */ \"./src/templates/loginForm.jsx\");\n/* harmony import */ var _logged_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logged.jsx */ \"./src/templates/logged.jsx\");\n\n\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\n\n\n\n\n\n\n\nfunction Profile() {\n  var store = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useStore)();\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(select()),\n      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState, 2),\n      logged = _useState2[0],\n      setLogged = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),\n      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState3, 2),\n      count = _useState4[0],\n      setCount = _useState4[1]; // \n\n\n  var unsubscribe;\n  var copyOfStore;\n  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {\n    // console.log(store.getState());\n    if (select() == true) {// console.log('ALREAD LOGIN IN');\n    } else {\n      var token = _frontend_Fdb__WEBPACK_IMPORTED_MODULE_3__.Read('token');\n\n      if (token != null && token != undefined) {\n        console.log(\"TOKEN::\", token);\n        store.dispatch({\n          type: 'Token/SetNew',\n          token: token\n        }); // console.log(store.getState());\n\n        _frontend_SendDataToserver__WEBPACK_IMPORTED_MODULE_4__.sendDataToServer('/auth/login/token', store, 'token', setLogged, 'notObj'); // console.log(dataFromServer);\n      } else {\n        // console.log('wait');\n        copyOfStore = _objectSpread({}, store.getState());\n        unsubscribe = store.subscribe(handlerMini);\n      }\n    }\n  });\n\n  function handlerMini() {\n    // console.log('unsubscribe');\n    unsubscribe();\n    setTimeout(function () {\n      if (whatIsHappened() == true) {\n        if (select() == false) {\n          // console.log(\"SKIP\");\n          // console.log('STATE::',logged,count);\n          setCount(++count);\n        } else if (select() == true) {\n          // console.log(\"LOG IN\");\n          setLogged(select());\n        }\n      }\n    }, 100);\n  }\n\n  function whatIsHappened() {\n    var FreshState = store.getState(); // console.log(copyOfStore,FreshState);\n    // console.log(copyOfStore.currentPage,FreshState.currentPage);\n\n    return copyOfStore.currentPage == FreshState.currentPage;\n  }\n\n  function select() {\n    var s = store.getState(); // console.log('ROUTE::',s,s.isLogged)\n\n    return s.isLogged;\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, logged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_logged_jsx__WEBPACK_IMPORTED_MODULE_7__.default, {\n    store: store,\n    loginOut: setLogged\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_loginForm_jsx__WEBPACK_IMPORTED_MODULE_6__.default, null));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);\n\n//# sourceURL=webpack://react-express-snikers/./src/templates/profile.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/defineProperty */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n/* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ \"./node_modules/@babel/runtime/helpers/esm/slicedToArray.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../frontend/Fdb.js */ \"./frontend/Fdb.js\");\n/* harmony import */ var _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../frontend/SendDataToserver.js */ \"./frontend/SendDataToserver.js\");\n/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-redux */ \"./node_modules/react-redux/es/index.js\");\n/* harmony import */ var _loginForm_jsx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./loginForm.jsx */ \"./src/templates/loginForm.jsx\");\n/* harmony import */ var _logged_jsx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./logged.jsx */ \"./src/templates/logged.jsx\");\n\n\n\nfunction ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }\n\nfunction _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0,_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }\n\n\n\n\n\n\n\n\nfunction Profile() {\n  var store = (0,react_redux__WEBPACK_IMPORTED_MODULE_5__.useStore)();\n\n  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(select()),\n      _useState2 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState, 2),\n      logged = _useState2[0],\n      setLogged = _useState2[1];\n\n  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(0),\n      _useState4 = (0,_babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_1__.default)(_useState3, 2),\n      count = _useState4[0],\n      setCount = _useState4[1]; // \n\n\n  var unsubscribe;\n  var copyOfStore;\n  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {\n    // console.log(store.getState());\n    if (select() == true) {// console.log('ALREAD LOGIN IN');\n    } else {\n      var token = _frontend_Fdb_js__WEBPACK_IMPORTED_MODULE_3__.Read('token');\n\n      if (token != null && token != undefined) {\n        console.log(\"TOKEN::\", token);\n        store.dispatch({\n          type: 'Token/SetNew',\n          token: token\n        }); // console.log(store.getState());\n\n        _frontend_SendDataToserver_js__WEBPACK_IMPORTED_MODULE_4__.sendDataToServer('/auth/login/token', store, 'token', setLogged, 'notObj'); // console.log(dataFromServer);\n      } else {\n        // console.log('wait');\n        copyOfStore = _objectSpread({}, store.getState());\n        unsubscribe = store.subscribe(handlerMini);\n      }\n    }\n  });\n\n  function handlerMini() {\n    // console.log('unsubscribe');\n    unsubscribe();\n    setTimeout(function () {\n      if (whatIsHappened() == true) {\n        if (select() == false) {\n          // console.log(\"SKIP\");\n          // console.log('STATE::',logged,count);\n          setCount(++count);\n        } else if (select() == true) {\n          // console.log(\"LOG IN\");\n          setLogged(select());\n        }\n      }\n    }, 100);\n  }\n\n  function whatIsHappened() {\n    var FreshState = store.getState(); // console.log(copyOfStore,FreshState);\n    // console.log(copyOfStore.currentPage,FreshState.currentPage);\n\n    return copyOfStore.currentPage == FreshState.currentPage;\n  }\n\n  function select() {\n    var s = store.getState(); // console.log('ROUTE::',s,s.isLogged)\n\n    return s.isLogged;\n  }\n\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(react__WEBPACK_IMPORTED_MODULE_2__.Fragment, null, logged ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_logged_jsx__WEBPACK_IMPORTED_MODULE_7__.default, {\n    store: store,\n    loginOut: setLogged\n  }) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_loginForm_jsx__WEBPACK_IMPORTED_MODULE_6__.default, null));\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);\n\n//# sourceURL=webpack://react-express-snikers/./src/templates/profile.jsx?");
 
 /***/ }),
 
@@ -1329,6 +1153,182 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction valueOf(obj) {\n  return obj.valueOf ? obj.valueOf() : Object.prototype.valueOf.call(obj);\n}\n\nfunction valueEqual(a, b) {\n  // Test for strict equality first.\n  if (a === b) return true;\n\n  // Otherwise, if either of them == null they are not equal.\n  if (a == null || b == null) return false;\n\n  if (Array.isArray(a)) {\n    return (\n      Array.isArray(b) &&\n      a.length === b.length &&\n      a.every(function(item, index) {\n        return valueEqual(item, b[index]);\n      })\n    );\n  }\n\n  if (typeof a === 'object' || typeof b === 'object') {\n    var aValue = valueOf(a);\n    var bValue = valueOf(b);\n\n    if (aValue !== a || bValue !== b) return valueEqual(aValue, bValue);\n\n    return Object.keys(Object.assign({}, a, b)).every(function(key) {\n      return valueEqual(a[key], b[key]);\n    });\n  }\n\n  return false;\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (valueEqual);\n\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/value-equal/esm/value-equal.js?");
+
+/***/ }),
+
+/***/ "./media/image4.png":
+/*!**************************!*\
+  !*** ./media/image4.png ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"adfa79338ddd8364bbcb.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image4.png?");
+
+/***/ }),
+
+/***/ "./media/image6.png":
+/*!**************************!*\
+  !*** ./media/image6.png ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"0845db37936a566b178e.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image6.png?");
+
+/***/ }),
+
+/***/ "./media/image7.png":
+/*!**************************!*\
+  !*** ./media/image7.png ***!
+  \**************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"9c749ec702651cd45443.png\";\n\n//# sourceURL=webpack://react-express-snikers/./media/image7.png?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayLikeToArray)\n/* harmony export */ });\nfunction _arrayLikeToArray(arr, len) {\n  if (len == null || len > arr.length) len = arr.length;\n\n  for (var i = 0, arr2 = new Array(len); i < len; i++) {\n    arr2[i] = arr[i];\n  }\n\n  return arr2;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _arrayWithHoles)\n/* harmony export */ });\nfunction _arrayWithHoles(arr) {\n  if (Array.isArray(arr)) return arr;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _asyncToGenerator)\n/* harmony export */ });\nfunction asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {\n  try {\n    var info = gen[key](arg);\n    var value = info.value;\n  } catch (error) {\n    reject(error);\n    return;\n  }\n\n  if (info.done) {\n    resolve(value);\n  } else {\n    Promise.resolve(value).then(_next, _throw);\n  }\n}\n\nfunction _asyncToGenerator(fn) {\n  return function () {\n    var self = this,\n        args = arguments;\n    return new Promise(function (resolve, reject) {\n      var gen = fn.apply(self, args);\n\n      function _next(value) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"next\", value);\n      }\n\n      function _throw(err) {\n        asyncGeneratorStep(gen, resolve, reject, _next, _throw, \"throw\", err);\n      }\n\n      _next(undefined);\n    });\n  };\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/asyncToGenerator.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _defineProperty)\n/* harmony export */ });\nfunction _defineProperty(obj, key, value) {\n  if (key in obj) {\n    Object.defineProperty(obj, key, {\n      value: value,\n      enumerable: true,\n      configurable: true,\n      writable: true\n    });\n  } else {\n    obj[key] = value;\n  }\n\n  return obj;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/defineProperty.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _extends)\n/* harmony export */ });\nfunction _extends() {\n  _extends = Object.assign || function (target) {\n    for (var i = 1; i < arguments.length; i++) {\n      var source = arguments[i];\n\n      for (var key in source) {\n        if (Object.prototype.hasOwnProperty.call(source, key)) {\n          target[key] = source[key];\n        }\n      }\n    }\n\n    return target;\n  };\n\n  return _extends.apply(this, arguments);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/extends.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _inheritsLoose)\n/* harmony export */ });\n/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ \"./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js\");\n\nfunction _inheritsLoose(subClass, superClass) {\n  subClass.prototype = Object.create(superClass.prototype);\n  subClass.prototype.constructor = subClass;\n  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js ***!
+  \*************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _iterableToArrayLimit)\n/* harmony export */ });\nfunction _iterableToArrayLimit(arr, i) {\n  var _i = arr == null ? null : typeof Symbol !== \"undefined\" && arr[Symbol.iterator] || arr[\"@@iterator\"];\n\n  if (_i == null) return;\n  var _arr = [];\n  var _n = true;\n  var _d = false;\n\n  var _s, _e;\n\n  try {\n    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {\n      _arr.push(_s.value);\n\n      if (i && _arr.length === i) break;\n    }\n  } catch (err) {\n    _d = true;\n    _e = err;\n  } finally {\n    try {\n      if (!_n && _i[\"return\"] != null) _i[\"return\"]();\n    } finally {\n      if (_d) throw _e;\n    }\n  }\n\n  return _arr;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _nonIterableRest)\n/* harmony export */ });\nfunction _nonIterableRest() {\n  throw new TypeError(\"Invalid attempt to destructure non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\");\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectSpread2.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _objectSpread2)\n/* harmony export */ });\n/* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ \"./node_modules/@babel/runtime/helpers/esm/defineProperty.js\");\n\n\nfunction ownKeys(object, enumerableOnly) {\n  var keys = Object.keys(object);\n\n  if (Object.getOwnPropertySymbols) {\n    var symbols = Object.getOwnPropertySymbols(object);\n\n    if (enumerableOnly) {\n      symbols = symbols.filter(function (sym) {\n        return Object.getOwnPropertyDescriptor(object, sym).enumerable;\n      });\n    }\n\n    keys.push.apply(keys, symbols);\n  }\n\n  return keys;\n}\n\nfunction _objectSpread2(target) {\n  for (var i = 1; i < arguments.length; i++) {\n    var source = arguments[i] != null ? arguments[i] : {};\n\n    if (i % 2) {\n      ownKeys(Object(source), true).forEach(function (key) {\n        (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__.default)(target, key, source[key]);\n      });\n    } else if (Object.getOwnPropertyDescriptors) {\n      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));\n    } else {\n      ownKeys(Object(source)).forEach(function (key) {\n        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));\n      });\n    }\n  }\n\n  return target;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/objectSpread2.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _objectWithoutPropertiesLoose)\n/* harmony export */ });\nfunction _objectWithoutPropertiesLoose(source, excluded) {\n  if (source == null) return {};\n  var target = {};\n  var sourceKeys = Object.keys(source);\n  var key, i;\n\n  for (i = 0; i < sourceKeys.length; i++) {\n    key = sourceKeys[i];\n    if (excluded.indexOf(key) >= 0) continue;\n    target[key] = source[key];\n  }\n\n  return target;\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _setPrototypeOf)\n/* harmony export */ });\nfunction _setPrototypeOf(o, p) {\n  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {\n    o.__proto__ = p;\n    return o;\n  };\n\n  return _setPrototypeOf(o, p);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/slicedToArray.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _slicedToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayWithHoles.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayWithHoles.js\");\n/* harmony import */ var _iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./iterableToArrayLimit.js */ \"./node_modules/@babel/runtime/helpers/esm/iterableToArrayLimit.js\");\n/* harmony import */ var _unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./unsupportedIterableToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js\");\n/* harmony import */ var _nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nonIterableRest.js */ \"./node_modules/@babel/runtime/helpers/esm/nonIterableRest.js\");\n\n\n\n\nfunction _slicedToArray(arr, i) {\n  return (0,_arrayWithHoles_js__WEBPACK_IMPORTED_MODULE_0__.default)(arr) || (0,_iterableToArrayLimit_js__WEBPACK_IMPORTED_MODULE_1__.default)(arr, i) || (0,_unsupportedIterableToArray_js__WEBPACK_IMPORTED_MODULE_2__.default)(arr, i) || (0,_nonIterableRest_js__WEBPACK_IMPORTED_MODULE_3__.default)();\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/slicedToArray.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js":
+/*!*******************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js ***!
+  \*******************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ _unsupportedIterableToArray)\n/* harmony export */ });\n/* harmony import */ var _arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./arrayLikeToArray.js */ \"./node_modules/@babel/runtime/helpers/esm/arrayLikeToArray.js\");\n\nfunction _unsupportedIterableToArray(o, minLen) {\n  if (!o) return;\n  if (typeof o === \"string\") return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n  var n = Object.prototype.toString.call(o).slice(8, -1);\n  if (n === \"Object\" && o.constructor) n = o.constructor.name;\n  if (n === \"Map\" || n === \"Set\") return Array.from(o);\n  if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return (0,_arrayLikeToArray_js__WEBPACK_IMPORTED_MODULE_0__.default)(o, minLen);\n}\n\n//# sourceURL=webpack://react-express-snikers/./node_modules/@babel/runtime/helpers/esm/unsupportedIterableToArray.js?");
 
 /***/ })
 

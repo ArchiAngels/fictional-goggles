@@ -1,6 +1,6 @@
 import React, {useState , useEffect} from 'react';
-import L from '../../frontend/Fdb';
-import Send from '../../frontend/SendDataToserver';
+import L from '../../frontend/Fdb.js';
+import Send from '../../frontend/SendDataToserver.js';
 import { useStore } from 'react-redux';
 import LoginForm from './loginForm.jsx';
 
@@ -67,7 +67,8 @@ function Profile(){
         return s.isLogged;
     }
     return <>
-        {logged ?<Logged store={store} loginOut={setLogged}/> :<LoginForm/>}
+        {logged ?<Logged store={store} loginOut={setLogged}/> :<LoginForm />}
+        {/* <p>looged</p> */}
     </>
 }
 
