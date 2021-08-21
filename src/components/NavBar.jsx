@@ -14,7 +14,6 @@ let links = [
 
 
 function NavBar(){
-    // console.log("DRAWED");
     let test = useStore();
     let [link,setLink] = useState(getCurrentActive());
 

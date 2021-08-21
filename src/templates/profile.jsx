@@ -20,8 +20,9 @@ function Profile(){
         if(select() == true){
             // console.log('ALREAD LOGIN IN');
         }else{
-            let token = L.Read('token');
+            let token = localStorage.getItem('token');
             if(token != null && token != undefined){
+                token = L.tryGetTokenAsJSON(token);
                 console.log("TOKEN::",token);
                 store.dispatch({type:'Token/SetNew',token:token});
                 // console.log(store.getState());

@@ -64,7 +64,7 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
             function select2(item){
                 return item[nameCollectStore];
             }
-
+            console.log("NOTOBJ:: ",obj);
             return obj;
         }
     })

@@ -27,8 +27,8 @@ router.post('/login', function(req,res){
 router.post('/login/token', function(req,res){
     // console.log(req.url);
     req.on('data', chunk => {
-        
-        console.log(`Data chunk available: ${chunk} ${typeof(JSON.parse(chunk))}`)
+        chunk = JSON.parse(chunk);
+        console.log(`Data chunk available: ${chunk} ${typeof(chunk)}`)
         let r = CheckToken.Parse(chunk);
         console.log(r);
         return res.json(r);

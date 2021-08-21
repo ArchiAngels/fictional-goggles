@@ -16,7 +16,7 @@ let SnikerCard = (props)=>{
     
     useEffect( function(){
         let fromLocalStorage = getCardInfoLocalStorage();
-        // console.log(fromLocalStorage);
+        // console.log(fromLocalStorage,state);
         if(fromLocalStorage == null){
             SnikersAPI(props.localId)
             .then(

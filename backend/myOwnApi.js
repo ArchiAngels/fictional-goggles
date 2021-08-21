@@ -47,6 +47,25 @@ router.get('/snikers/:id', function(req,res){
       res.send(error)
     }
   )
+});
+
+router.post('/userChange',function(req,res){
+    const CheckToken = require('./parseClientServerToken');
+    const updateUser = require('./dbUserUpdateInfo');
+    console.log(req.url);
+    req.on('data',function(chunk){
+      console.log('POST USER CHANGE ::',chunk+'');
+      let J = JSON.parse(chunk+'');
+      let result = CheckToken.Parse(J.token,true);
+      console.log('PARSED::',result)
+      if(result.mess == 'ok'){
+        return updateUser(result.data.data.id,J,res,result);
+        
+      }else{
+        return res.send('BAD');
+      }
+    })
+    
 })
 
 module.exports = router

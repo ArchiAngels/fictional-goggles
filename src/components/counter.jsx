@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import BDF from '../../frontend/Fdb.js';
 import { useStore } from 'react-redux';
 import '../styles/circleCounter.scss';
+import ApiSend from '../../frontend/OnlySendSomeData.js';
 
 const CircleCounter = function(props){
 
@@ -9,6 +11,7 @@ const CircleCounter = function(props){
     let store = useStore();
     let [Name,setName] = useState(props.name);
     let [Active,setActive] = useState(getSelect());
+    let [onlyUPDT,setRefresh] = useState(0);
 
     // console.log('draw only counter',Name,Active);
     let oldStore = {...store.getState()}
@@ -16,10 +19,24 @@ const CircleCounter = function(props){
 
 
     function minihandler(){
+        // console.log("+SUB::",Name);
         if(whatIsHappened(Name)){
-        }else{
+            // console.log('NOTHING ::',Name);
             unsubscribe();
-            setActive(getSelect())
+            setRefresh(++onlyUPDT);
+        }else{
+            // console.log("-SUB::",Name);
+            unsubscribe();
+            setActive(getSelect());
+            let token = localStorage.getItem('token');
+            if(token != null && token != undefined && token.length > 1){
+                token = BDF.tryGetTokenAsJSON(token);
+                console.log('SEND token ok',token);
+                ApiSend.JustSendUserChange({name:Name,value:getSelect(),token:token});
+            }else{
+                console.log('NOT SEND bcz not have a token')
+            }
+            
         }
         
         
@@ -27,6 +44,7 @@ const CircleCounter = function(props){
         
         
     }
+    
     function whatIsHappened(){
         let old = select(oldStore);
         let fresh = getSelect();

@@ -19,6 +19,7 @@ exports.VerifyReg = function(chunk,res,typeAccAction){
             myresolve({mess:result.mess,value:result.value,state:true,token:CheckToken.Hash(
                 {
                     data:{
+                        id:result.value.id,
                         login:result.value.login,
                         UserAcces:true,
                         codeWord:'TLH'

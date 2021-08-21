@@ -1,4 +1,4 @@
-exports.Parse = function(token){
+exports.Parse = function(token,withData = false){
     token = JSON.parse(token);
     let jwt = require('jsonwebtoken');
     let secret = 'WeaReTH$%#CHAMPI()N5_@#SDA%^>:';
@@ -11,6 +11,10 @@ exports.Parse = function(token){
             result.why = err;
             result.state = false;
         }else{
+            console.log('DECODE::',decode);
+            if(withData){
+                result.data = decode.data;
+            }
             result.mess = 'ok';
             result.token = token;
             result.state = true;

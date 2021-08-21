@@ -20,3 +20,14 @@ exports.ReadArr = function(key){
         query = query == null? 0 : query == ''? 0 : query.split(',').length;
     return query;
 }
+exports.tryGetTokenAsJSON = function(string){
+    try {
+      
+        string = JSON.parse(string);
+      // console.log('OK::',str);
+        return JSON.stringify(string);
+    } catch (error) {
+      // console.log('err::',error);
+        return JSON.stringify(string)
+    }
+}

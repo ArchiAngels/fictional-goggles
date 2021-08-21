@@ -45,7 +45,7 @@ function getEmail(email,type){
                 return new Promise(async function(resl,reje){
                     if(type == 'register'){
                         if(email2 == undefined){
-                            const AddNewUser = require('./backend/createNewUser');
+                            const AddNewUser = require('./createNewUser');
                             // console.log('This email is free to use');
                             await AddNewUser.CreateUserDB(usersList,currentID_,email)
                             .then(
