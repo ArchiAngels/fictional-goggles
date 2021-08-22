@@ -8,9 +8,10 @@ function Order(){
 
     let [oldSnikers,setOldSnikers] = useState(getArrFav());
     let [price,setPrice] = useState(0);
-    useEffect(function(){
-        toPay();
-    })
+    let howMuch = getArrFav().length;
+    // useEffect(function(){
+    //     toPay();
+    // })
     
     let totalPay = 0;
     function takeOnliDigits(str){
@@ -34,13 +35,20 @@ function Order(){
             l = l == null? 0 : l == ''? 0: l.split(',').map(i => parseInt(i));
         return l;
     }
+    function go(){
+        howMuch -= 1;
+        // console.log('GO::',howMuch);
+        if(howMuch == 0){
+            toPay();
+        }
+    }
     return <section className='SnikersContent Fortypx'>
 
         {oldSnikers == 0? 
             <Empty></Empty>
         :
         oldSnikers.map(function(elem){
-                return <SnikerCard key = {elem} localId={elem} changeSumPay = {toPay}/>
+                return <SnikerCard key = {elem} localId={elem} changeSumPay = {toPay} ready={go}/>
             })
         }     
         <div className='Total'>

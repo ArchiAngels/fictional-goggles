@@ -2,10 +2,16 @@ exports.Read = function(key){
     let l = localStorage.getItem(key);
     return JSON.parse(l);
 }
+exports.SimpleRead = function(key){
+    return localStorage.getItem(key);
+}
 exports.Save = function(key,data){
     let l = localStorage;
     data = JSON.stringify(data);
     l.setItem(key,data);
+}
+exports.SimpleSave = function(key,data){
+    localStorage.setItem(key,data);
 }
 exports.Delete = function(key){
     let l = localStorage;

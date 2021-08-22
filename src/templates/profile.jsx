@@ -23,7 +23,7 @@ function Profile(){
             let token = localStorage.getItem('token');
             if(token != null && token != undefined){
                 token = L.tryGetTokenAsJSON(token);
-                console.log("TOKEN::",token);
+                // console.log("TOKEN::",token);
                 store.dispatch({type:'Token/SetNew',token:token});
                 // console.log(store.getState());
                 Send.sendDataToServer('/auth/login/token',store,'token',setLogged,'notObj');

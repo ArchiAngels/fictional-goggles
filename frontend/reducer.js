@@ -39,6 +39,13 @@ export default function ReducerState(state = initialState, action ){
                 HowMuchSelectedItems: state.HowMuchSelectedItems = action.Counter
             }
         };
+        case 'Page/changeCounterlikeAndCounter':{
+            return {
+                ...state,
+                HowMuchFavoriteItems: state.HowMuchFavoriteItems = action.CounterLike,
+                HowMuchSelectedItems: state.HowMuchSelectedItems = action.CounterFavorite
+            }
+        };
         case 'Page/SwitchForm':{
             return {
                 ...state,
@@ -71,7 +78,11 @@ export default function ReducerState(state = initialState, action ){
         case 'Page/LogoutTrue':{
             return {
                 ...state,
-                isLogged: state.isLogged = false
+                token: state.token = null,
+                isLogged: state.isLogged = false,
+                HowMuchFavoriteItems: state.HowMuchFavoriteItems = 0,
+                HowMuchSelectedItems: state.HowMuchFavoriteItems = 0
+                
             }
         };
         case 'Token/SetNew':{

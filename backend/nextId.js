@@ -1,15 +1,15 @@
 exports.NEXT_ID = async function(currentID_,CollectName){
     let NEXT_ID = parseInt(currentID_.currentID)+1;
     const filter = { "myID": "-1" };
-        const updateDoc = {
-            $set: {
-        
-                currentID: (NEXT_ID)+''
-
-            },
-        };
+    const updateDoc = {
+        $set: {
     
-        const result = await CollectName.updateOne(filter, updateDoc);
+            currentID: (NEXT_ID)+''
+
+        },
+    };
+    
+    const result = await CollectName.updateOne(filter, updateDoc);
     
         // console.log(
     

@@ -30,9 +30,19 @@ const CircleCounter = function(props){
             setActive(getSelect());
             let token = localStorage.getItem('token');
             if(token != null && token != undefined && token.length > 1){
-                token = BDF.tryGetTokenAsJSON(token);
-                console.log('SEND token ok',token);
-                ApiSend.JustSendUserChange({name:Name,value:getSelect(),token:token});
+                setTimeout(()=>{
+                    token = BDF.tryGetTokenAsJSON(token);
+                    let value2 = BDF.SimpleRead(Name);
+                    
+                    if(value2 != null){
+                        console.log('SEND token ok',token,'\nand value::',value2);
+                        ApiSend.JustSendUserChange({name:Name,value:value2,token:token});
+                    }
+                    else{
+                        console.log('ERR value is null::',value2);
+                        ApiSend.JustSendUserChange({name:Name,value:'',token:token});
+                    }
+                },5);
             }else{
                 console.log('NOT SEND bcz not have a token')
             }
@@ -48,7 +58,7 @@ const CircleCounter = function(props){
     function whatIsHappened(){
         let old = select(oldStore);
         let fresh = getSelect();
-
+        // console.log(Name,old,fresh);
         return old == fresh
     }
     function select(s){

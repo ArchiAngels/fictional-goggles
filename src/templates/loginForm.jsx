@@ -39,10 +39,36 @@ export default function LoginForm(){
             let s = formRedux.getState();
             console.log("SEND");
             dataFromServer = await Send.sendDataToServer(`/auth/${select(s)}`,formRedux,'authForm',setRes,'obj');
+            // console.log("loginForm OUTPUT::",dataFromServer);
+            let value = dataFromServer.value;
+            // console.log('DATA::',value);
             FB.Save('user',{
-                n:dataFromServer.value.FirstName,
-                l:dataFromServer.value.LastName,
-                id:dataFromServer.value.id});
+                n:value.FirstName,
+                l:value.LastName,
+                id:value.id,
+                like:value.like,
+                addCart:value.addCart
+            });
+            save('like',value.like);
+            save('addCart',value.addCart);
+            formRedux.dispatch({type:'Page/changeCounterlikeAndCounter',CounterLike:LengthOfItem(value.like),CounterFavorite:LengthOfItem(value.addCart)});
+            function LengthOfItem(str){
+                // console.log('ASD::',str,str.split(',').length);
+                if(str != '' && str != null){
+                    return str.split(',').length;
+                }else{
+                    return 0;
+                }
+                
+            }
+            // setTimeout(()=>{
+            //     console.log(formRedux.getState());
+            // },300)
+            function save(key,data){
+                if(data != '' && data != null){
+                    FB.SimpleSave(key,data);
+                }
+            }
         }else{
             console.log("NOT SEND");
         }

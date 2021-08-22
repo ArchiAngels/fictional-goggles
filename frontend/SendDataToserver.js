@@ -12,12 +12,13 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
         xhr.send(body);
         xhr.onload = function(){
             let r = JSON.parse(xhr.response);
-            console.log(r);
+            // console.log(r);
             
             if(r.state == true){
                 // console.log("OKKK");
                 mm.Save('token',r.token);
                 store.dispatch({type:'Page/LoginTrue'});
+                store.dispatch({type:'Token/SetNew',token:r.token});
                 clearTimeout(timeUp);
                 if(type == 'obj'){
                     state('ok');
@@ -50,7 +51,7 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
                 for(let item in obj){
                     result[item] = obj[item].value;
                 }
-            console.log(s,result);
+            // console.log(s,result);
 
             function select2(item){
                 return item[nameCollectStore];
@@ -64,7 +65,7 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
             function select2(item){
                 return item[nameCollectStore];
             }
-            console.log("NOTOBJ:: ",obj);
+            // console.log("NOTOBJ:: ",obj);
             return obj;
         }
     })

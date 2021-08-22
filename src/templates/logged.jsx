@@ -5,13 +5,17 @@ import FB from '../../frontend/Fdb';
 function LoggedProfile(props){
     function logout(){
         console.log('LogOuted');
-        FB.Delete('token');
-        props.store.dispatch({type:'Token/DeleteCurrentToken'});
+        // console.log(props.store.getState());
+        FB.Clear();
         props.store.dispatch({type:'Page/LogoutTrue'});
+        
+       
         props.loginOut(false);
+        // console.log(props.store.getState());
 
     }
     let user = FB.Read('user');
+    // console.log(props.store.getState());
     return<section className='logged_main_wrap'>
 
         <div>

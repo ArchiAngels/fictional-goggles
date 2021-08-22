@@ -37,8 +37,10 @@ let SnikerCard = (props)=>{
                             objCopy['isDrawed'] = true;
 
                             setCardInfoLocalStorage(objCopy);
+                            if(props.ready){
+                                props.ready();
+                            }
                             setState(obj);
-
                         
 
                         // return props.changeState(props.localId-1,obj);
@@ -51,6 +53,7 @@ let SnikerCard = (props)=>{
             setCardInfoLocalStorage(fromLocalStorage);
         }
         else{
+            
             let objCopy = JSON.parse(JSON.stringify(fromLocalStorage));
                 objCopy.like = checkInLocalStorage('like',props.localId);
                 objCopy.addCart = checkInLocalStorage('addCart',props.localId);
@@ -59,12 +62,13 @@ let SnikerCard = (props)=>{
                 }else{
                     fromLocalStorage.isDrawed = true;
                     setCardInfoLocalStorage(fromLocalStorage);
+                    if(props.ready){
+                        props.ready();
+                    }
                     setState(objCopy);
                     
-                }
-                
+                }            
         }
-        
     })
     function ChangeState(nameState,newValue){
 

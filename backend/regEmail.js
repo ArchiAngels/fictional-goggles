@@ -22,7 +22,9 @@ exports.VerifyReg = function(chunk,res,typeAccAction){
                         id:result.value.id,
                         login:result.value.login,
                         UserAcces:true,
-                        codeWord:'TLH'
+                        codeWord:'TLH',
+                        likes:result.value.like || 0,
+                        addCart:result.value.addCart || 0
                     },
                     exp: Math.floor(Date.now() / 1000) + (60 * 60)
                 },
