@@ -36,11 +36,11 @@ const CircleCounter = function(props){
                     
                     if(value2 != null){
                         console.log('SEND token ok',token,'\nand value::',value2);
-                        ApiSend.JustSendUserChange({name:Name,value:value2,token:token});
+                        ApiSend.JustSendUserChange('/api/userChange',{name:Name,value:value2,token:token});
                     }
                     else{
                         console.log('ERR value is null::',value2);
-                        ApiSend.JustSendUserChange({name:Name,value:'',token:token});
+                        ApiSend.JustSendUserChange('/api/userChange',{name:Name,value:'',token:token});
                     }
                 },5);
             }else{

@@ -68,4 +68,39 @@ router.post('/userChange',function(req,res){
     
 })
 
+router.post('/makeOrder',function(req,res){
+    const CheckToken = require('./parseClientServerToken');
+    const AddNewOrder = require('./dbAddOrder');
+    // const updateUser = require('./dbUserUpdateInfo');
+    console.log(req.url);
+    req.on('data',async function(chunk){
+
+      let t = setTimeout(()=>{
+        res.send({mess:'Time is up'});
+      },5000);
+
+      console.log('POST NEW ORDER ::',chunk+'');
+
+      let J = JSON.parse(chunk+'');
+      let result = CheckToken.Parse(J.token,true);
+      let value = result.data.data;
+
+      console.log('PARSED::',result,'\n',value);
+
+      let R = await AddNewOrder({price:J.price,user_id:value.id});
+
+      if(R){
+        clearTimeout(t);
+        res.send(R)
+      }
+    })
+
+    // res.send('In building please trust us');
+
+});
+
+// function getOrders(){
+
+// }
+
 module.exports = router

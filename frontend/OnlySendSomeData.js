@@ -1,4 +1,4 @@
-exports.JustSendUserChange = function(body){
+exports.JustSendUserChange = function(url,body){
     body = JSON.stringify(body);
     return new Promise(function(resolve,reject){
         let t = setTimeout(()=>{
@@ -6,7 +6,7 @@ exports.JustSendUserChange = function(body){
         },5000);
 
         let xhr = new XMLHttpRequest;
-        xhr.open('POST','/api/userChange');
+        xhr.open('POST',url);
         xhr.send(body);
         xhr.onload = function(){
             if(xhr.status == 200){

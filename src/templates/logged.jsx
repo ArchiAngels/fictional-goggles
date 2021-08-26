@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/logged.scss';
 import FB from '../../frontend/Fdb';
+import Orders from '../components/OrdersHistory.jsx';
 
 function LoggedProfile(props){
     function logout(){
@@ -24,6 +25,7 @@ function LoggedProfile(props){
                 <p>LastName : {user.l}</p>
                 <p>Id : {user.id}</p>
             </header>
+            <Orders></Orders>
             <nav>
                 <ul>
                     <li>

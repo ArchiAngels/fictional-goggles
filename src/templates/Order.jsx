@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/SnikerList.scss';
 import SnikerCard from '../components/SnikerCard.jsx';
-
+import APIsend from '../../frontend/OnlySendSomeData.js';
+import BDF from '../../frontend/Fdb.js';
 import Empty from './NoItems.jsx';
 
 function Order(){
@@ -42,6 +43,20 @@ function Order(){
             toPay();
         }
     }
+
+
+    function MakeOrder(){
+        let token = localStorage.getItem('token');
+            if(token != null && token != undefined && token.length > 1){
+                console.log('good token');
+                token = BDF.tryGetTokenAsJSON(token);
+                APIsend.JustSendUserChange('/api/makeOrder',{token:token,price:price});
+            }
+            else{
+                console.log('bad token');
+            }
+        
+    }
     return <section className='SnikersContent Fortypx'>
 
         {oldSnikers == 0? 
@@ -59,7 +74,7 @@ function Order(){
                         <span className='price'>{price}</span>
                 }
             </div>
-            <div className="btn-buy">
+            <div className="btn-buy" onClick={MakeOrder}>
                 <p>Buy</p>
             </div>
         </div>
