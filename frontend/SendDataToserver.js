@@ -15,15 +15,19 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
             // console.log(r);
             
             if(r.state == true){
-                // console.log("OKKK");
-                mm.Save('token',r.token);
-                store.dispatch({type:'Page/LoginTrue'});
+                console.log("OKKK");
                 store.dispatch({type:'Token/SetNew',token:r.token});
+                store.dispatch({type:'Page/LoginTrue'});
+
+                mm.Save('token',r.token);
+                
                 clearTimeout(timeUp);
                 if(type == 'obj'){
-                    state('ok');
+                    // console.log("VIA OBJ");
+                    state(r.state);
                     return resolve({mess:'ok',isGodd:true,value:r.value});
                 }else{
+                    // console.log("VIA NOTOBJ");
                     state(r.state);
 
                 }
@@ -34,6 +38,10 @@ exports.sendDataToServer = function (url,store,nameCollectStore,state,type){
                 // window.location.reload();
             }else{
                 console.log("OOOPS");
+                store.dispatch({type:'Token/DeleteCurrentToken'});
+                store.dispatch({type:'Page/LogoutTrue'});
+                // console.log("OOOPS 2",store.getState());
+                
                 mm.Clear();
                 clearTimeout(timeUp);
                 return resolve({mess:'bad',isGodd:true,value:r.why});

@@ -14,41 +14,55 @@ function Profile(){
     // 
     let unsubscribe;
     let copyOfStore;
-    useEffect(function(){
+    useEffect(async function(){
         // console.log(store.getState());
         
         if(select() == true){
-            // console.log('ALREAD LOGIN IN');
+            // console.log('ALREAD LOGIN IN',store.getState());
         }else{
+            // console.log('NOT YET LOGIN IN',store.getState());
             let token = localStorage.getItem('token');
             if(token != null && token != undefined){
+                // console.log("STEP 1");
                 token = L.tryGetTokenAsJSON(token);
                 // console.log("TOKEN::",token);
                 store.dispatch({type:'Token/SetNew',token:token});
                 // console.log(store.getState());
-                Send.sendDataToServer('/auth/login/token',store,'token',setLogged,'notObj');
+                let dataFromServer = await Send.sendDataToServer('/auth/login/token',store,'token',setLogged,'notObj');
                 // console.log(dataFromServer);
+                if(dataFromServer.mess == 'bad'){
+                    // console.log("mda");
+                    // unsubscribe();
+                    initSubscribe();
+                    // copyOfStore = {...store.getState()};
+                    // unsubscribe = store.subscribe(handlerMini);
+                }
             }else{
                 // console.log('wait');
-                copyOfStore = {...store.getState()};
-                unsubscribe = store.subscribe(handlerMini);
+                // console.log("STEP 2");
+                // console.log('NOT YET LOGIN IN 2',store.getState());
+                initSubscribe();
             }
         }
         
     })
-
+    function initSubscribe(){
+        copyOfStore = {...store.getState()};
+        unsubscribe = store.subscribe(handlerMini);
+    }
     function handlerMini(){
         // console.log('unsubscribe');
         unsubscribe();
         setTimeout(()=>{
             if(whatIsHappened() == true){
-                if(select() == false){
+                let happend = select();
+                if(happend == false){
                     // console.log("SKIP");
                     // console.log('STATE::',logged,count);
                     setCount(++count);
-                }else if(select() == true){
+                }else if(happend == true){
                     // console.log("LOG IN");
-                    setLogged(select());
+                    setLogged(happend);
                 }
             }
             
@@ -68,7 +82,7 @@ function Profile(){
         return s.isLogged;
     }
     return <>
-        {logged ?<Logged store={store} loginOut={setLogged}/> :<LoginForm />}
+        {logged ?<Logged store={store} loginOut={setLogged}/> :<LoginForm/>}
         {/* <p>looged</p> */}
     </>
 }

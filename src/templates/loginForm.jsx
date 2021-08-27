@@ -36,12 +36,19 @@ export default function LoginForm(){
     async function HandlerSubmit(event){
         // console.log(event);
         if(CheckAllDataInForm(event,formRedux) == 1){
+
             let s = formRedux.getState();
+
             console.log("SEND");
+
             dataFromServer = await Send.sendDataToServer(`/auth/${select(s)}`,formRedux,'authForm',setRes,'obj');
+
             // console.log("loginForm OUTPUT::",dataFromServer);
+
             let value = dataFromServer.value;
+
             // console.log('DATA::',value);
+
             FB.Save('user',{
                 n:value.FirstName,
                 l:value.LastName,
@@ -49,9 +56,16 @@ export default function LoginForm(){
                 like:value.like,
                 addCart:value.addCart
             });
+
             save('like',value.like);
             save('addCart',value.addCart);
+
             formRedux.dispatch({type:'Page/changeCounterlikeAndCounter',CounterLike:LengthOfItem(value.like),CounterFavorite:LengthOfItem(value.addCart)});
+            
+            // console.log("STATE::",formRedux.getState());
+
+            
+
             function LengthOfItem(str){
                 // console.log('ASD::',str,str.split(',').length);
                 if(str != '' && str != null){
@@ -61,9 +75,6 @@ export default function LoginForm(){
                 }
                 
             }
-            // setTimeout(()=>{
-            //     console.log(formRedux.getState());
-            // },300)
             function save(key,data){
                 if(data != '' && data != null){
                     FB.SimpleSave(key,data);
@@ -91,18 +102,16 @@ export default function LoginForm(){
 
     }
 
-    function suscess(res){
-        if(res == 'ok'){
-            setTimeout(()=>{
-                window.location.reload();
-            },300)
-            return <h4>{res}</h4>
-        }else if(res == 'bad'){
-            return <h4>{res}</h4>
-        }else{
-            return ''
-        }
-    }
+    // function suscess(res){
+    //     if(res == 'ok'){
+    //         props.loginOut(true);
+    //         return <h4>{res}</h4>
+    //     }else if(res == 'bad'){
+    //         return <h4>{res}</h4>
+    //     }else{
+    //         return ''
+    //     }
+    // }
 
     return <div className='LoginFormWrap'>
         <div className="wrapForm">

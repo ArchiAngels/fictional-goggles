@@ -81,7 +81,7 @@ export default function ReducerState(state = initialState, action ){
                 token: state.token = null,
                 isLogged: state.isLogged = false,
                 HowMuchFavoriteItems: state.HowMuchFavoriteItems = 0,
-                HowMuchSelectedItems: state.HowMuchFavoriteItems = 0
+                HowMuchSelectedItems: state.HowMuchSelectedItems = 0
                 
             }
         };
