@@ -1,12 +1,25 @@
 .NewsSliderBlock{
-    height: 300px;
-    padding: 3rem;
+    
+    @media(min-width:1055px){
+        &{
+            height: 300px;
+            padding: 3rem;
+        }
+    }
+    @media(max-width:1050px){
+        &{
+            display: none;
+        }
+    }
 }
 .NewsSliderWrap{
+    
     background:#F4EFE9;
     display:flex;
     border-radius: 20px;
     position: relative;
+   
+    
 }
 .News_text-title{
     max-width:240px;

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useStore } from 'react-redux';
 
-import '../styles/SnikerList.scss';
+// import '../styles/SnikerList.scss';
+import '../styles/order.scss';
 
 import SnikerCard from '../components/SnikerCard.jsx';
 import Empty from './NoItems.jsx';

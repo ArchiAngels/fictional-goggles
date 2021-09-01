@@ -1,0 +1,65 @@
+.Total{
+    border-top:1px solid black;
+    width:100%;
+    @media(min-width:515px){
+        &{
+            padding:20px;
+        }
+    }
+    @media(max-width:510px){
+        &{
+            padding:20px 0;
+        }
+    }
+    @media(min-width:471px){
+        & .btn-buy{
+            width:100px;
+            margin: 0 0 0 50px;
+        }
+    }
+    @media(max-width:470px){
+        &{
+            flex-wrap: wrap;
+            & .toPay{
+                text-align: center;
+                width:100%;
+                margin:10px auto;
+            }
+        }
+        & .btn-buy{
+            width:80%;
+            margin: 10px auto;
+        }
+    }
+    display: flex;
+    & .toPay{
+        font-size:20px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        & .price{
+            background:#000;
+            color:#fff;
+        }
+    }
+    & .btn-buy{
+        height:30px;
+        border-radius: 15px;
+        text-align: center;
+        user-select: none;
+        font-size:20px;
+        
+        background: #cfd6ff;
+        transition: 
+            transform 0.15s,
+            box-shadow 0.09s
+        ;
+        cursor: pointer;
+        &:hover{
+            // color:red;
+            box-shadow: 0 0 10px #0025fa;
+        }
+        &:active{
+            transform: translateY(10px);
+        }
+    }
+}
