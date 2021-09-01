@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+
 import BDF from '../../frontend/Fdb.js';
 import send from '../../frontend/getSomethingFromServer.js';
-import SnikerCard from './SnikerCard.jsx';
+
+import OneRow from './orderHistroy1row.jsx';
 
 export default function Orders(){
     let [cards,setCards] = useState([]);
@@ -26,33 +28,11 @@ export default function Orders(){
             // console.log('FINISH FETCHING DATA');
         }
     }
-    let styles = {
-        display:"flex",
-        flexWrap:'wrap',
-        border:"1px solid #000"
-    }
-    let important = {
-        fontWeight:'bold'
-    }
     return <>
         <p>Orders from DataBase to user {userId}</p>
         <div>
             {cards.length > 0?
-                cards.map(item => 
-                    <div key={'CARD'+cards.indexOf(item)+item.items.join(',')} >
-                        <p onClick={(event)=>{
-                            console.log('click::',event.target)
-                        }}>Order <span style={important}>#{item.id}</span> price: <span style={important}>{item.cost}</span></p>
-                        <div style={styles}>
-                            {item.items.map(card => {
-                                let key = ''+card+cards.indexOf(item);
-                                // console.log("NEED SPAWN CARD::",card,'KEY::',key);
-                                return <SnikerCard key={key} localId={card} notLike={true} notAddCart={true}/>
-                            })}
-                        </div>
-                        
-                    </div>)
-                :<p>History orders is empty</p>
+                cards.map((item,index) => <OneRow key={'TABLE'+index} item={item} cards={cards}></OneRow>):<p>History orders is empty</p>
             }
         </div>
         

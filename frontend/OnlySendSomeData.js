@@ -20,11 +20,15 @@ exports.JustSendUserChange = function(url,body,callback){
     }).then(
         function(value){
             console.log(value);
-            callback(value);
+            if(callback){
+                callback(value);
+            }
         },
         function(err){
             console.log(err);
-            callback(err);
+            if(callback){
+                callback(err);
+            }
         }
     )
 }

@@ -1,0 +1,19 @@
+.RowWithCards{
+    & .WrapWithCards{
+        display:flex;
+        flex-wrap:wrap;
+        border:1px solid #000;
+    }
+    & .important{
+        font-weight:bold;
+    }
+    & .ShowDetails{
+        padding: 1rem 1rem 1rem 0;
+        cursor: pointer;
+        border:1px solid transparent;
+        transition:0.15s border;
+        &:hover{
+            border-bottom: 1px solid #000;
+        }
+    }
+}
