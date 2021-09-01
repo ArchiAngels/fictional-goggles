@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useStore } from 'react-redux';
 import '../styles/SnikerList.scss';
 import SnikerCard from '../components/SnikerCard.jsx';
 import APIsend from '../../frontend/OnlySendSomeData.js';
@@ -7,6 +8,7 @@ import Empty from './NoItems.jsx';
 
 function Order(){
 
+    let store = useStore();
     let [oldSnikers,setOldSnikers] = useState(getArrFav());
     let [price,setPrice] = useState(0);
     let howMuch = getArrFav().length;
@@ -50,12 +52,19 @@ function Order(){
             if(token != null && token != undefined && token.length > 1){
                 console.log('good token');
                 token = BDF.tryGetTokenAsJSON(token);
-                APIsend.JustSendUserChange('/api/makeOrder',{token:token,price:price});
+                APIsend.JustSendUserChange('/api/makeOrder',{token:token,price:price},myCallBack);
             }
             else{
                 console.log('bad token');
             }
         
+    }
+    function myCallBack(status){
+        console.log("FROM CALL BACK::",status);
+        if(status.code == 201){
+            store.dispatch({type:'Page/changeCounteraddCart',Counter:0})
+            
+        }
     }
     return <section className='SnikersContent Fortypx'>
 

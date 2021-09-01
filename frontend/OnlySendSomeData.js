@@ -1,8 +1,8 @@
-exports.JustSendUserChange = function(url,body){
+exports.JustSendUserChange = function(url,body,callback){
     body = JSON.stringify(body);
     return new Promise(function(resolve,reject){
         let t = setTimeout(()=>{
-            reject({mess:'Time up'});
+            reject({mess:'Time up',code:504});
         },5000);
 
         let xhr = new XMLHttpRequest;
@@ -11,18 +11,20 @@ exports.JustSendUserChange = function(url,body){
         xhr.onload = function(){
             if(xhr.status == 200){
                 clearTimeout(t);
-                resolve({mess:'resolve',value:xhr.response});
+                resolve({mess:'resolve',value:xhr.response,code:201});
             }else{
                 clearTimeout(t);
-                resolve({mess:'reject',value:xhr.response});
+                resolve({mess:'reject',value:xhr.response,code:500});
             }
         }
     }).then(
         function(value){
-            console.log(value)
+            console.log(value);
+            callback(value);
         },
         function(err){
-            console.log(err)
+            console.log(err);
+            callback(err);
         }
     )
 }

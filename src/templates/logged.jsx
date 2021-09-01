@@ -20,19 +20,31 @@ function LoggedProfile(props){
     return<section className='logged_main_wrap'>
 
         <div>
-            <header>
-                <p>Name : {user.n}</p>
-                <p>LastName : {user.l}</p>
-                <p>Id : {user.id}</p>
-            </header>
-            <Orders></Orders>
-            <nav>
-                <ul>
-                    <li>
-                        <p onClick = {logout} functionality='loginOut'>Logout</p>
-                    </li>
-                </ul>
-            </nav>
+            <div className="left-fixed-section">
+                <header>
+                    <nav>
+                        <ul>
+                            <li>
+                                <p>Name : {user.n}</p>
+                            </li>
+                            <li>
+                                <p>LastName : {user.l}</p>
+                            </li>
+                            <li>
+                                <p>Id : {user.id}</p>
+                            </li>
+                            <li>
+                                <p onClick = {logout} functionality='loginOut'>Logout</p>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+            </div>
+            <div className="right-scroleed-section">
+                <Orders></Orders>
+            </div>
+            
+            
         </div>
 
     </section>

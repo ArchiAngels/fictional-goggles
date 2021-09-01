@@ -99,8 +99,19 @@ router.post('/makeOrder',function(req,res){
 
 });
 
-// function getOrders(){
-
-// }
+router.get('/getOrders/:user_id',async function(req,res){
+  let order_db = require('./dbGetOrders');
+  // function go(){
+    console.log(req.url,req.params.user_id);
+    let result = await order_db(req.params.user_id);
+    // console.log("WOW::",result);
+    if(result.mess = 'ok'){
+      res.json(result)
+    }else{
+      res.send({mess:'bad',why:result.why});
+    }
+  // }
+  // go();
+})
 
 module.exports = router

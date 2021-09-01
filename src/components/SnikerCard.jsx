@@ -10,9 +10,11 @@ import SnikersAPI from '../../frontend/getDataFromApi.js';
 
 let SnikerCard = (props)=>{
     // console.log(`CARD ${props.localId} DRAWED`);
+    // console.log("KEY::",props.key);
     const CARD_NAME = `card${props.localId}`;
+    // console.log('CARD NAME::',CARD_NAME,props.notLike,props.notAddCart);
     const test = useStore();
-    const [state,setState] = useState({imgSRC:null,like:false,addCart:false,title:null,price:null});
+    const [state,setState] = useState({imgSRC:null,like:false,addCart:false,title:null,price:null,isDrawed:false});
     
     useEffect( function(){
         let fromLocalStorage = getCardInfoLocalStorage();
@@ -33,14 +35,16 @@ let SnikerCard = (props)=>{
                         };
 
                         let objCopy = JSON.parse(JSON.stringify(obj));
-                            objCopy['id'] = props.localId;
-                            objCopy['isDrawed'] = true;
+                        objCopy['id'] = props.localId;
+                        // objCopy['isDrawed'] = true;
 
-                            setCardInfoLocalStorage(objCopy);
-                            if(props.ready){
-                                props.ready();
-                            }
-                            setState(obj);
+                        setCardInfoLocalStorage(objCopy);
+
+                        if(props.ready){
+                            props.ready();
+                        }
+                        setState({...obj,isDrawed:true});
+
                         
 
                         // return props.changeState(props.localId-1,obj);
@@ -48,24 +52,35 @@ let SnikerCard = (props)=>{
                 }
             )
         }
-        else if(fromLocalStorage.isDrawed == true){
-            fromLocalStorage.isDrawed = false;
-            setCardInfoLocalStorage(fromLocalStorage);
+        else if(state.isDrawed == true){
+            // setState({...state,isDrawed:false})
+            // setCardInfoLocalStorage(fromLocalStorage);
         }
         else{
             
             let objCopy = JSON.parse(JSON.stringify(fromLocalStorage));
                 objCopy.like = checkInLocalStorage('like',props.localId);
                 objCopy.addCart = checkInLocalStorage('addCart',props.localId);
-                if(objCopy.isDrawed == true){
+                if(state.isDrawed == true){
 
                 }else{
-                    fromLocalStorage.isDrawed = true;
-                    setCardInfoLocalStorage(fromLocalStorage);
+                    // fromLocalStorage.isDrawed = true;
+                    // setCardInfoLocalStorage(fromLocalStorage);
                     if(props.ready){
                         props.ready();
                     }
-                    setState(objCopy);
+                    // console.log("COPYOBJ::",objCopy);
+                    // console.log("STATE::",state);
+                    // useState({imgSRC:null,like:false,addCart:false,title:null,price:null,isDrawed:false});
+                    setState({
+                        ...state,
+                        imgSRC:objCopy.imgSRC,
+                        title:objCopy.title,
+                        price:objCopy.price,
+                        like:objCopy.like,
+                        addCart:objCopy.addCart,
+                        isDrawed:true});
+                    // console.log("STATE::",state);
                     
                 }            
         }
@@ -146,8 +161,8 @@ let SnikerCard = (props)=>{
             id:         object.id,
             imgSRC:     object.imgSRC,
             price:      object.price,
-            title:      object.title,
-            isDrawed:   object.isDrawed
+            title:      object.title
+            // isDrawed:   object.isDrawed
         };
         output = JSON.stringify(output);
         l.setItem(CARD_NAME,output);
@@ -163,8 +178,6 @@ let SnikerCard = (props)=>{
             return JSON.parse(output);
         }
     }
-    
-    
     return <>
         <div 
             id={`CardNr${props.localId}`} 
@@ -173,6 +186,7 @@ let SnikerCard = (props)=>{
             <div className='SnikerCard-Top'>
                 <div className='Sniker-Img'>
                     <img className={state.imgSRC ? 'Sniker_img-pic':"EMPTY img"} src={state.imgSRC ? state.imgSRC:''}></img>
+                    {props.notLike?'':
                     <div className={`${state.like?"Sniker-Like":state.imgSRC ? 'Sniker-Like NotChoosed':"EMPTY noDisplay"}`}> 
                         <span 
                         onClick={()=>{
@@ -181,7 +195,7 @@ let SnikerCard = (props)=>{
                         className={`material-icons-outlined ${state.like ? "liked":""}`}>
                             {state.imgSRC ? state.like? "favorite":'favorite_border':"netuIMG"}
                         </span>
-                    </div>
+                    </div>}
                 </div>
             </div>
             <div className='SnikerCard-Bottom'>
@@ -196,20 +210,21 @@ let SnikerCard = (props)=>{
                         </label>
                     </div>
                     {state.price ? "":<div className='EMPTY price'></div>}
+                    {props.notAddCart?"":
                     <div className='Sniker-add'>
-                        <div 
-                            id={state.price? 'addToCart':""} 
-                            className={state.price? state.addCart ? 'Choosed':"NotChoosed":'EMPTY btn-add'}
-                            onClick={()=>{
-                                ChangeState('addCart',! state.addCart);
-                                if(props.changeSumPay){
-                                    props.changeSumPay();
-                                }
+                    <div 
+                        id={state.price? 'addToCart':""} 
+                        className={state.price? state.addCart ? 'Choosed':"NotChoosed":'EMPTY btn-add'}
+                        onClick={()=>{
+                            ChangeState('addCart',! state.addCart);
+                            if(props.changeSumPay){
+                                props.changeSumPay();
                             }
-                        }>
-                            <span className="material-icons-outlined">{state.price ? state.addCart ? "done" :"add":""}</span>
-                        </div>
+                        }
+                    }>
+                        <span className="material-icons-outlined">{state.price ? state.addCart ? "done" :"add":""}</span>
                     </div>
+                </div>}
                 </div>
             </div>
         </div>
